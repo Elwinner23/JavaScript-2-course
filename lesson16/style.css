@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    max-width: 375px;
+    width: 100%;
+}
+
+header{
+    color: white;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+main{
+    background: var(--Background, #F9FAFB);
+    padding: 24px 16px;
+}
