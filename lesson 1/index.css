@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    align-items: center;
+}
+.name h1{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 127px;
+    color: var(--Black, #19191A);
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+.name h2{
+    margin: 0;
+    color: var(--Gray, #B0B0B0);
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+.topleft img{
+    margin: 4px 8px;
+}
+.topleft{
+    padding-right: 18px;
+}
+.elips{
+    border-radius: var(--Corner-1, 100px);
+    background: var(--Primary, #005FF9);
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+}
+.topbar{
+    display: flex;
+    align-items: center;
+}
+.massenger{
+    background-color: #B0B0B0;
+    padding-top: 24px;
+    padding-bottom: 149px;
+    width: 375px;
+}
+.text1{
+    margin-left: 87px;
+    display: flex;
+    padding: var(--Corner-3, 12px) var(--Corner-2, 16px);
+    flex-direction: column;
+    width: 272px;
+}
+.text10{
+    border-radius: var(--Corner-3, 12px);
+    padding: 12px 16px;
+    background-color: #005FF9;
+    margin-right: 16px;
+}
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.text1 p{
+    display: flex;
+    min-width: 24px;
+    max-width: 240px;
+    align-items: flex-start;
+    color: #FFFFFF;
+    padding-left: 2px;
+}
+.text2{
+    margin-left: 16px;
+    display: flex;
+    padding: var(--Corner-3, 12px) var(--Corner-2, 16px);
+    flex-direction: column;
+    border-radius: var(--Corner-3, 12px);
+    background: var(--White, #FFF);
+    width: 272px;
+}
+.button2{
+    display: flex;
+    flex-direction: row;
+    padding-left: 232px;
+}
+.text20 li{
+    color: var(--Black, #19191A);
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+.text20{
+    padding: 12px 16px 4.19px 16px;
+}
+.button2 p{
+    color: var(--Gray, #B0B0B0);
+    text-align: right;
+    font-family: "Plus Jakarta Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+}
+.text30 p{
+    color: var(--Black, #19191A);
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+.push{
+    background: var(--White, #FFF);
+    display: flex;
+    width: 375px;
+    padding: 14px var(--Corner-2, 16px) 0px var(--Corner-2, 16px);
+    align-items: flex-start;
+    gap: 10px;
+    width: 285px;
+}
+.push1{
+    border-radius: 8px;
+    background: var(--Background, #F9FAFB);
+    display: flex;
+    padding: var(--Corner-3, 12px) 14px;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 0;
+}
+.push1 p{
+    color: var(--Gray, #B0B0B0);
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+.pushimg{
+    border-radius: 8px;
+    background: var(--Primary, #005FF9);
+    display: flex;
+    padding: var(--Corner-3, 12px);
+    align-items: flex-start;
+    gap: 10px;
+}
+.pushbutton{
+    display: flex;
+    width: 375px;
+    height: 38px;
+    padding: 23px 118px 10px 118px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
