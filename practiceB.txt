@@ -1,0 +1,6 @@
+const name = alert("Привет, "+prompt("Введите ваше имя"))
+const surname = alert(prompt("Теперь вашу фамилию"))
+const patronymic = alert(prompt("Теперь ваше отчество"))
+const mail = alert(prompt("Введите вашу почту"))
+
+console.log(name+" "+surname+" "+patronymic+" "+mail);
