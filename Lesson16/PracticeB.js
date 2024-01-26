@@ -1,0 +1,1 @@
+console.log(`${prompt("Фамилия:")} ${prompt("Имя:")} ${prompt("Отчество:")} - ${prompt("Почта:")}`)
