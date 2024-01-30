@@ -65,7 +65,7 @@ line-height: 150%; /* 21px */
 
 
 .sms{
-    background: var(--Background, #c5c6c7);
+    background: #F9FAFB;
     padding: 24px 16px;
     display: flex;
     flex-direction: column;
