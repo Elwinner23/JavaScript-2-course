@@ -2,3 +2,107 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+    width: 375px;
+    height: 768px;
+    background-color: #F9FAFB;
+    border: 1px solid red;
+}
+
+.up{
+    background-color: #fff;
+    padding: 5%;
+    display: flex; 
+}
+
+.name{
+    margin-left: 7%;
+    margin-right: 48%;
+    display: flex;
+    gap: 10%;
+}
+
+.n{
+    font-weight: 600;
+}
+
+.on{
+    color: #B0B0B0;
+}
+
+.s1{
+    margin-top: 5%;
+    background-color: #005FF9;
+    color: #fff;
+    width:60%;
+    margin-left: 30%;
+    border-radius: 20px;
+    padding: 2.5%;
+}
+
+.s1 p{
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
+.s1 .t{
+    margin-left: 70%;
+}
+
+.t{
+    display: flex;
+}
+
+.s1 .t p{
+    margin-top: 8%;
+}
+
+.s2{
+    margin-top: 5%;
+    background-color: #fff;
+    width: 60%;
+    margin-left: 5%;
+    border-radius: 20px;
+    padding: 2.5%;
+}
+
+.s2 p{
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
+.s2 .t{
+    color: #B0B0B0;
+}
+
+.s2 .t p{
+    margin-top: 2%;
+    margin-left: 80%;
+}
+
+input{
+    margin-top: 5%;
+    padding: 4%;
+    margin-left: 10%;
+    padding-right: 15%;
+    border: none;
+}
+
+button{
+    background-color: #005FF9;
+    border: none;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.convert{
+    margin-left: 2%;
+    margin-top: 5%;
+}
+
+.text{
+    margin-top: 30%;
+    height: 100px;
+    background-color: #fff;
+}
