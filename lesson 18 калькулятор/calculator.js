@@ -3,43 +3,39 @@ let b;
 let x;
 let result;
 
-while (true) {
-a = Number(prompt("Введите первое число:"));
-x= prompt("Введите математический знак:");
-b = Number(prompt("Введите второе число:"));
+while (true) { 
+  
+  x = prompt("Введите математический оператор или 'выход', если хотите выйти:"); 
 
-  switch(x) {
-    case '+':
-      result = a + b;
-      console.log("=" + result)
-      break;
-    case '-':
-      result = a - b;
-      console.log("=" + result);
-      break;
-    case '*':
-      result = a * b;
-      console.log("=" + result);
-      break;
-    case '/':
-      result = a / b;
-      console.log("=" + result);
-      break;
-    case '^':
-      result = a ** b;
-      console.log("=" + result);
-      break;
-    case '%':
-      result = a % b;
-      console.log("=" + result);
-      break;
-    default:
-      result = 'Неверно введен оператор';
-      console.log(result);
-      break
+  
+  if (x === "выход") { 
+    break; 
+  } 
+	a = Number(prompt("Введите первое число:"));
+	b = Number(prompt("Введите второе число:"));
+  
+    if (x === "+") {
+    	result = a + b;
+  	} 
+  	else if (x === "-") {
+    	result = a - b;
+  	} 
+ 	else if (x === "*") {
+    	result = a * b;
+  	} 
+  	else if (x === "/") {
+    	result = a / b;
+  	}
+  	else if (x === "^") {
+    	result = a ** b;
+  	}
+
+    else if (x === "%") {
+    result = a % b;
+    } 
+  else {
+    result = "Неверный оператор!";
   }
 
-  if (!confirm("Если хотите продолжить нажмите 'ок'. Если желаете выйти, нажмите 'отмена'")) {
-    break;
-  }
+    console.log("= " + result);
 }
