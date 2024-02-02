@@ -3,22 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
     <title>Messanger</title>
 </head>
 <body>
     <header>
-        <div style="width: 100%; height: 100%; border-radius: 1px; border: 1.50px #19191A solid"></div>
-        <div style="width: 100%; height: 100%; background: #005FF9; border-radius: 100px"></div>
+        <svg class="head_back" width="80" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="Icon">
+            <path id="Vector" d="M9 17.5L1.70711 10.2071C1.31658 9.81658 1.31658 9.18342 1.70711 8.79289L9 1.5" stroke="#19191A" stroke-width="1.5" stroke-linecap="round"/>
+            </g>
+        </svg>
+
+        <div class="icon" style="width: 130%; height: 100%;">
+            <div style="width: 40px; height: 40px; background: #005FF9; border-radius: 100px"></div>
+        </div>
+
         <div class="ns">
             <p class="name_txt">Александр</p>
             <p class="status_txt">Online</p>
         </div>
         <button class="more">
             <div style="width: 100%; height: 100%; padding-top: 2.63px; padding-bottom: 2.63px; justify-content: center; align-items: center; display: inline-flex">
-                <div style="width: 18.75px; height: 4.25px; position: relative; transform: rotate(360deg); transform-origin: 0 0">
-                <div style="width: 4.25px; height: 4.25px; left: -4.25px; top: -0px; position: absolute; background: #19191A"></div>
-                <div style="width: 4.25px; height: 4.25px; left: -4.25px; top: 7.25px; position: absolute; background: #19191A"></div>
-                <div style="width: 4.25px; height: 4.25px; left: -4.25px; top: 14.50px; position: absolute; background: #19191A"></div>
+                <div class="points" style="width: 18.75px; height: 4.25px; position: relative; transform: rotate(360deg); transform-origin: 0 0">
+                    <div class="point"></div>
+                    <div class="point" style="width: 4.25px; height: 4.25px; left: -4.25px; top: 7.25px; position: absolute; background: #19191A"></div>
+                    <div class="point" style="width: 4.25px; height: 4.25px; left: -4.25px; top: 14.50px; position: absolute; background: #19191A"></div>
                 </div>
             </div>
         </button>
@@ -30,7 +47,7 @@
             <div class="f_down">
                 <p class="f_time">13:00</p>
 
-                <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="tick" width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="Icon">
                     <path id="Vector" d="M1.62524 7.67807L5.27515 11.0374C5.7375 11.4629 6.45383 11.4458 6.89536 10.9987L15.9321 1.8476" stroke="#A5F469" stroke-width="1.75" stroke-linecap="round"/>
                     <path id="Vector_2" d="M20.3742 1.8476L11.5773 10.6445" stroke="#A5F469" stroke-width="1.75" stroke-linecap="round"/>
@@ -40,15 +57,13 @@
         </div>
 
         <div class="s_mess">
-            <p class="f_text">
-                <ol>
-                    <li>Включи режим просмотра для программистов</li>
-                    <li>Изучи каждый элемент</li>
-                    <li>Копируй настройки каждого элемента дизайна в свой код</li>
+                <ol class="texts">
+                    <li class="s_text">Включи режим просмотра для программистов</li>
+                    <li class="s_text">Изучи каждый элемент</li>
+                    <li class="s_text">Копируй настройки каждого элемента дизайна в свой код</li>
                 </ol>
-            </p>
             <div class="s_down">
-                <p class="f_time">13:00</p>
+                <p class="s_time">13:00</p>
             </div>
         </div>
 
@@ -57,7 +72,7 @@
             <div class="f_down">
                 <p class="f_time">13:00</p>
 
-                <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="tick" width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="Icon">
                     <path id="Vector" d="M1.62524 7.67807L5.27515 11.0374C5.7375 11.4629 6.45383 11.4458 6.89536 10.9987L15.9321 1.8476" stroke="#A5F469" stroke-width="1.75" stroke-linecap="round"/>
                     <path id="Vector_2" d="M20.3742 1.8476L11.5773 10.6445" stroke="#A5F469" stroke-width="1.75" stroke-linecap="round"/>
@@ -67,9 +82,9 @@
         </div>
 
         <div class="s_mess">
-            <p class="f_text">100%, если что, мы всегда поможем тебе</p>
+            <p class="s_text" style="margin-left: 10%; margin-right: 10%; padding-top: 5%;">100%, если что, мы всегда поможем тебе &#41</p>
             <div class="s_down">
-                <p class="f_time">13:00</p>
+                <p class="s_time">13:00</p>
             </div>
         </div>
     </main>
@@ -79,9 +94,9 @@
             <input class="txt" type="text" placeholder="Введите текст...">
 
             <button class="send">
-                <div style="width: 100%; height: 100%; padding-left: 2.84px; padding-right: 2.84px; padding-top: 3.72px; padding-bottom: 3.72px; justify-content: center; align-items: center; display: inline-flex">
-                    <div style="width: 18.32px; height: 16.57px; background: #F9FAFB"></div>
-                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.60129 0.828942C1.56588 0.368807 0.501522 1.41322 0.941977 2.45715L3.66159 8.90295C3.68781 8.96509 3.68781 9.03518 3.66159 9.09732L0.941977 15.5431C0.501522 16.5871 1.56588 17.6315 2.60129 17.1713L18.418 10.1424C19.4079 9.70255 19.4079 8.29773 18.418 7.85785L2.60129 0.828942ZM7.6416 8.25C7.22739 8.25 6.8916 8.58579 6.8916 9C6.8916 9.41421 7.22739 9.75 7.6416 9.75L10.6416 9.75C11.0558 9.75 11.3916 9.41421 11.3916 9C11.3916 8.58579 11.0558 8.25 10.6416 8.25L7.6416 8.25Z" fill="#F9FAFB"/>
+                </svg>
             </button>
         </div>
     </footer>
