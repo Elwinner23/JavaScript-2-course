@@ -1,0 +1,12 @@
+let a = 1;
+console.log(typeof a);
+let b = 1n;
+console.log(typeof b);
+let c = 'Serg';
+console.log(typeof c);
+let d = null;
+console.log(typeof d);
+let f = true;
+console.log(typeof f);
+let i;
+console.log(typeof i);
