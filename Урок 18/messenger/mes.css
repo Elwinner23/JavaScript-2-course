@@ -1,0 +1,44 @@
+*{
+    background-color: white;
+}
+.header{
+    padding: 16px;
+    width: 375px;
+    display: flex;
+}
+#one {
+    width: 24px;
+    margin-top: 10.5px;
+    margin-right: 10.5px;
+    border: none;
+    background-color: white;
+}
+#two {
+    width: 36px;
+    margin-top: 4.5px;
+    margin-right: 4.5px;
+    border: none;
+    background-color: white;
+}
+.texthead {
+    margin-right: 127px;
+    margin-left: 4.5px;
+}
+.texthead h1{
+    color: #19191A;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+.texthead p{
+    color: #B0B0B0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+#three{
+    width: 36px;
+    margin-top: 4.5px;
+    border: none;
+    background-color: white;
+}
