@@ -1,0 +1,35 @@
+:root{
+    --color-white: #fff;
+    --color-blue: #005FF9;
+    --color-black: #000;
+    --color-secondary: #A5F469;
+    --color-gray: #B0B0B0;
+    --color-bacgroud: #F9FAFB;
+}
+
+h1{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    
+}
+p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+body{
+    height: 768px;
+    width: 375px;
+}
+
+.left-bar{
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+}
+
+.top-bar-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
