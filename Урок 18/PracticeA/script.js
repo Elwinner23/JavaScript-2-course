@@ -20,9 +20,16 @@ function calculator() {
         break;
     
     case "/":
-      result = num1 / num2;
-        break;
+    if(num2 == 0)
+    result = ("Нет решения");
+  
+    else
+    result = num1 / num2;
+
+    break;
+    
 }
 
+document.getElementById("opertaor").innerHTML = op;
 document.getElementById('result').innerHTML = result;
 }

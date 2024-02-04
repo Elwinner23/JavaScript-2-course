@@ -10,19 +10,23 @@
 	<div class="calculator-block">
 		<div class="calculator-block-number">
 			<input id="num1">
-			
-			<div>
-			<button class="opertaor" onclick="op ='+' ">+</button>
-			<button class="opertaor" onclick="op = '-' ">-</button>
-			<button class="opertaor" onclick="op = '*' ">*</button>
-			<button class="opertaor" onclick="op = '/' ">/</button>
-			</div>
+			<p id="opertaor"></p>
 			<input id="num2">
 
 			<button onclick="calculator()">=</button>
 
 			<p id="result"></p>
 		</div>
+
+
+			<div class="block-operator">
+			<button class="opertaor" onclick="op ='+' ">+</button>
+			<button class="opertaor" onclick="op = '-' ">-</button>
+			<button class="opertaor" onclick="op = '*' ">*</button>
+			<button class="opertaor" onclick="op = '/' ">/</button>
+			</div>
+			
+
 	</div>	
 <script src="script.js"></script>
 </body>
