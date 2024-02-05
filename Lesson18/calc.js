@@ -21,6 +21,18 @@ while (i){
         case '/':
           result = +i / +m;
           break;
+        case '%':
+          result = +i % +m;
+          break;
+        case '**':
+          result = Math.pow(+i, +m)
+          break;
+        case '//':
+          result = Math.floor(+i/+m)
+          break;
+        case '%':
+          result = +i % +m
+          break;
       }
     alert(result)
-}
+ }
