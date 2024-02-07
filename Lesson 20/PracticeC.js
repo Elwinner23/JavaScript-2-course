@@ -6,15 +6,19 @@ let students = [
 ];
 
 for (let student of students){
-    console.log(student)
+    console.log(`Имя студента: ${student.name}, возраст студента: ${student.age}`)
 }
 
 students.push({ name: 'Sonya', age: 17 })
 
-const filtered = (name) => {
-    return students.filter((item) => {
-      return item.name === name;
-    });
+let name_find_s = 'Soya'
+let flag = 0
+for (let student of students){
+    if (student.name == name_find_s){
+        console.log('Ученик найден')
+        flag = 1
+    }
 }
-  
-console.log(filtered('Sonya'));
+if(flag == 0){
+    console.log('Ученик не найден')
+}
