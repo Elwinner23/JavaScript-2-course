@@ -1,9 +1,23 @@
-alert("Добро пожаловать в меню калькулятора!!!")
+alert("Добро пожаловать в меню калькулятора!!!");
 
-let num1 = prompt("Введите первое число: ")
-let num2 = prompt("Введите второе число: ")
-let operator = prompt("Введите оператор, который хотите использовать: ")
+let flag = true;
 
-let answer = eval(num1+operator+num2)
+while (flag) {
+    let num1 = prompt("Введите первое число: ");
+    let num2 = prompt("Введите второе число: ");
+    let operator = prompt("Введите оператор, который хотите использовать: ");
 
-alert("Результат = " + answer)
+    let answer = eval(num1 + operator + num2);
+
+    alert("Результат = " + answer);
+
+
+    let isContinue = prompt("Хотите ли вы продолжить?\nВведите 'да' или 'нет'");
+
+    if (isContinue.length === 3)
+    {
+        flag = false
+    }
+}
+
+alert("До свидания, спасибо за использование калькулятора!!!")
