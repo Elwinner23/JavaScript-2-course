@@ -17,6 +17,6 @@ switch (c) {
     break;
  case "%" : alert(a%b);
     break;
-default: oops, error;
+default: "oops, error";
 };
 console.log(`Your result ${c}`);
