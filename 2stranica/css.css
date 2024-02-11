@@ -1,0 +1,308 @@
+*{
+    width: 1440px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: #22202E;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.header{
+    padding: 25px 80px;
+    display: flex;
+    background-color: white;
+}
+.header h1{
+    font-size: 20px;
+    line-height: 140%;
+    margin-top: 25px;
+}
+.menu a{
+    color: #726E8D;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 44px;
+    width: 100px;
+}
+.menu{
+    display: flex;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 29px;
+}
+.icons {
+    display: flex;
+    margin-top: 30px;
+}
+.icons a{
+    width: 16px;
+    margin-right: 16px;
+}
+
+
+.kartochka{
+    background-color: #F9F9F9;
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 47px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.kartochka img{
+    width: 607px;
+}
+.haracteristiki{
+    padding-top: 31px;
+    padding-left: 65px;
+    padding-bottom: 26px;
+}
+.haracteristiki h3{
+    font-size: 24px;
+    color: #2A254B;
+    line-height: 140%;
+}
+.haracteristiki h4{
+    font-size: 24px;
+    color: #2A254B;
+    line-height: 140%;
+}
+.haracteristiki img{
+    width: 518px;
+}
+.haracteristiki p{
+    width: 498px;
+    font-size: 16px;
+    color: #2A254B;
+    line-height: 140%;
+}
+.dim{
+    display: flex;
+    line-height: 140%;
+}
+.dim img{
+    width: 1px;
+}
+.height{
+    width: 62px;
+    text-align: left;
+}
+.width{
+    width: 52px;
+    text-align: center;
+}
+.depth{
+    width: 53px;
+    text-align: right;
+    margin-right: 364px;
+}
+#kolichestvo{
+    width: 122px;
+    margin-right: 566px;
+    margin-bottom: 28px;
+}
+.add{
+    width: 163px;
+    background-color: #2A254B;
+    color: white;
+    font-size: 20px;
+    border: none;
+    height: 60px;
+    margin-right: 16px;
+}
+.save{
+    width: 213px;
+    height: 60px;
+    background-color: white;
+    color: #2A254B;
+    font-size: 20px;
+    border: none;
+}
+
+
+.drugoe{
+    background-color: white;
+    padding: 64px 80px 44px 80px;
+}
+.drugoe h2{
+    font-size: 32px;
+    line-height: 140%;
+    margin-bottom: 24.5px;
+    color: #2A254B;
+    font-weight: 400;
+}
+.tovary{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin-bottom: 43.5px;
+}
+.tovar1{
+    width: 630px;
+    margin-right: 20px;
+    font-size: 20px;
+    line-height: 140%;
+    color: #2A254B;
+    font-weight: 400;
+}
+.tovar2{
+    width: 305px;
+    margin-right: 20px;
+    font-size: 20px;
+    line-height: 140%;
+    color: #2A254B;
+    font-weight: 400;
+}
+.tovar3{
+    width: 305px;
+    font-size: 20px;
+    line-height: 140%;
+    color: #2A254B;
+    font-weight: 400;
+}
+.tovary img{
+    margin-bottom: 24px;
+}
+.tovary p{
+    margin-bottom: 8px;
+}
+.drugoe button{
+    width: 189px;
+    height: 60px;
+    background-color: #F9F9F9;
+    color: #2A254B;
+    font-size: 20px;
+    border: none;
+    margin-left: 635px;
+}
+
+
+.brand{
+    padding-top: 80px;
+    padding-bottom: 42px;
+    padding-left: 80px;
+    padding-right: 80px;
+    color: #2A254B;
+    background-color: white;
+}
+.bloki{
+    display: flex;
+    justify-content: space-around;
+}
+.what{
+    background-color: #F9F9F9;
+    width: 305px;
+    padding: 48px;
+    margin-left: 20px;
+}
+.brand h2{
+    font-size: 32px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.what img{
+    width: 24px;
+    margin-bottom: 12px;
+}
+.what h5{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+.what p{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.join{
+    display: flex;
+}
+.join img{
+    width: 720px;
+}
+.forma{
+    background-color: white;
+    padding: 71px 175px 66px 72px;
+    color: #2A254B;
+}
+.forma h2{
+    font-size: 24px;
+    font-weight: 400;
+    margin-left: 70px;
+    margin-bottom: 26px;
+}
+.forma p{
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 208px;
+}
+.forma img{
+    width: 472px;
+}
+
+
+.footer{
+    background-color: #2A254B;
+    padding: 58px 80px 50px 80px;
+}
+.verx{
+    display: flex;
+}
+.menufooter{
+    width: 127px;
+    margin-right: 90px;
+}
+.menuhead{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: white;
+    line-height: 140%;
+}
+.minimenu{
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    margin-bottom: 12px;
+    color: white;
+    line-height: 140%;
+}
+.categories{
+    width: 98px;
+    margin-right: 119px;
+}
+.company{
+    width: 120px;
+    margin-right: 94px;
+}
+.mailing{
+    width: 627px;
+}
+.mailing img{
+    width: 627px;
+}
+.mailing p{
+    margin-bottom: 8px;
+}
+.footer hr{
+    margin-top: 56px;
+    margin-bottom: 24px;
+    border-color: #4E4D93;
+}
+.niz{
+    display: flex;
+}
+.niz p{
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    line-height: 140%;
+    margin-right: 760px;
+}
+.iconki{
+    display: flex;
+}
+.iconki img{
+    width: 24px;
+    margin-left: 24px;
+}

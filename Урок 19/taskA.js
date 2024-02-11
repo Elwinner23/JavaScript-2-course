@@ -9,7 +9,7 @@ switch (b) {
         alert(a + c);
         break;
     case '-':
-        alert (a - c);
+        alert(a - c);
         break;
     case '*':
         alert(a * c);
@@ -20,3 +20,6 @@ switch (b) {
     default:
         alert('Вы ввели что-то неправильно(');
 }
+
+
+
