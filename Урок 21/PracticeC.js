@@ -12,6 +12,9 @@ class User{
   set name(newName) {
       this.#name = newName
   }
+  get password() {
+    return this.#password;
+  }
   constructor (name,password,id,role) {
       this.#name = name;
       this.#password = password;
@@ -37,9 +40,9 @@ class User{
 }
 
 let user1 = User('Akshin', 'qwerty123', Date.now(), "admin");
-console.log(user1);
-user1.password();
-console.log(user1);
-console.log(user2);
+console.log(user1.password);
+user1.changePassword();
+console.log(user1.password);
+console.log(user2.password);
 user2.changePassword();
-console.log(user2);
+console.log(user2.password);
