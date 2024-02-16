@@ -10,7 +10,6 @@
     display: flex;
     flex-direction: column;    
 }
-
 .user-message {
     background-color: #e6f7ff;
     text-align: right;
