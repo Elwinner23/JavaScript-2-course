@@ -1,0 +1,22 @@
+.message {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 600px;
+}
+#messages {
+    width: 900px;
+    display: flex;
+    flex-direction: column;    
+}
+#messages .user-message{
+}
+.user-message {
+    background-color: #e6f7ff;
+    text-align: right;
+    margin-left: 270px;
+}
+.another-message {
+    background-color: #f0f0f0;
+}
