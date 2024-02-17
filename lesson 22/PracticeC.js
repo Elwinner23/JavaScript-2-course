@@ -16,8 +16,10 @@ messages.forEach((message) => {
     messageElement.classList.add('two');
   }
 
-  messageElement.innerText = message.text;
- 
+  const textElement = document.createElement('p');
+  textElement.innerText = message.text;
+  messageElement.appendChild(textElement);
 
   sms.appendChild(messageElement);
 });
+
