@@ -161,15 +161,15 @@
 .input-teh{
     
 }
-.input-teh form{
+.input-teh .form{
     display: grid;
     display: flex;
     height: 49px;
 }
-.input-teh form input{
+.input-teh .form input{
     width: 285px;
 }
-.input-teh form button{
+.input-teh .form button{
     width: 48px;
     height: 48px;  
     background-color: #005FF9;
@@ -177,13 +177,13 @@
     border-radius: 8px;
     margin-left: 10px;
 }
-.input-teh form input{
+.input-teh .form input{
     border: none;
     background-color: #F9FAFB;
     padding: 12px 14px;
 
 }
-.input-teh form input::placeholder{
+.input-teh .form input::placeholder{
     font-size: 16px;
     color: #B0B0B0;
 }
