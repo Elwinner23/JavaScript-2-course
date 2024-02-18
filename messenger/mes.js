@@ -1,11 +1,24 @@
-console.log(prompt('Введите ваше ФИО'));
-console.log(prompt('Введите вашу электронную почту'));
+const soo = document.getElementsByClassName('soo')[0];
+const messages = [
+  { text: 'Привет, как дела?', sender: 'user' },
+  { text: 'Привет, у меня все хорошо!', sender: 'Alecsander' },
+  { text: 'Отлично!', sender: 'user' }
+];
 
-let a = "текст"
-let b = "17"
-let c = "17n"
-let d = "true"
-console.log(typeof a)
-console.log(typeof b)
-console.log(typeof c)
-console.log(typeof d)
+
+messages.forEach((message) => {
+  const messageElement = document.createElement('div');
+
+ 
+  if (message.sender === 'user') {
+    messageElement.classList.add('one');
+  } else if (message.sender === 'Alecsander') {
+    messageElement.classList.add('two');
+  }
+
+  const textElement = document.createElement('p');
+  textElement.innerText = message.text;
+  messageElement.appendChild(textElement);
+
+  soo.appendChild(messageElement);
+});

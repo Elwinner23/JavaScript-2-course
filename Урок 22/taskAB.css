@@ -1,0 +1,21 @@
+.square{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    cursor: pointer;
+  }
+
+#sq{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#colorsq{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
