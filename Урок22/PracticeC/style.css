@@ -15,11 +15,11 @@ body {
     padding:  10px;
     text-align: center;
 }
-
-.chat-body{
-    height:  300px;
-    padding:  10px;
+.chat-body {
+    height: 300px;
+    padding: 10px;
     overflow-y: auto;
+    display: flex;
 }
 
 .chat-footer {

@@ -1,7 +1,6 @@
 function chat(event) {
     if (event.key === "Enter") {
         let message = document.getElementById('messageInput').value;
-        let hello = "Привет";
 
         let user = document.createElement('p');
         let span = document.createElement('span'); 
