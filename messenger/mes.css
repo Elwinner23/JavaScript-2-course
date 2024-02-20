@@ -1,185 +1,199 @@
 *{
+    margin: 0;
+    padding: 0;
 }
-.header{
+body{
+    max-width: 375px;
+    width: 100%;
+}
+
+header{
+    background: white;
     padding: 16px;
-    width: 375px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
 }
-#one {
+
+header img{
     width: 24px;
-    margin-top: 10.5px;
-    margin-right: 10.5px;
-    border: none;
-    background-color: white;
+    height: 24px;
 }
-#two {
+.left img{
+   margin-right: 6px;
+}
+.right{
+    padding: 2.626px 0px;
+}
+.cryg{
+    background-color: #005FF9;
+    border-radius: 100%;
     width: 36px;
-    margin-top: 4.5px;
-    margin-right: 4.5px;
-    border: none;
-    background-color: white;
-}
-.texthead {
-    margin-right: 127px;
-    margin-left: 12px;
-}
-.texthead h1{
-    color: #19191A;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: -10px;
-}
-.texthead p{
-    color: #B0B0B0;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-}
-#three{
-    width: 36px;
-    margin-top: 4.5px;
-    border: none;
-    background-color: white;
-}
+    height: 36px;
 
-
-.pole {
-    background-color: #F9FAFB;
-    width: 407px;
-    padding-top: 24px;
-    padding-bottom: 149px;
 }
-.soo1{
-    background-color: #005FF9;
-    border-radius: 12px;
-    width: 272px;
-    margin-left: 87px;
-    padding: 5px 16px 5px 16px;
-}
-.text{
-    background-color: #005FF9;
-    color: white;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 150%;
-    margin-bottom: -7px;
-    width: 200px;
-}
-.time1{
-    background-color: #005FF9;
-    color: white;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 12px;
-    line-height: 150%;
-    font-weight: 400;
-    margin-left: 196px;
-}
-.niz{
+.left{
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    
+    
 }
-.prosm{
-    width: 24px;
-    background-color: #005FF9;
-    margin-left: 5px;
+header p:nth-child(1){
+    color: var(--Black, #19191A);
+    max-width: 150px;
+font-family: "Plus Jakarta Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 24px */
+}
+header p:nth-child(2){
+    max-width: 150px;
+    color: var(--Gray, #B0B0B0);
+font-family: "Plus Jakarta Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 21px */
+
 }
 
-.soo3{
-    background-color: #005FF9;
-    border-radius: 12px;
-    width: 202px;
-    margin-left: 157px;
-    padding: 5px 16px 5px 16px;
-}
-.time3{
-    margin-left: 127px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 12px;
-    line-height: 150%;
-    font-weight: 400;
-    color: white;
+
+
+
+.sms{
+    background: #F9FAFB;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 35%;
+
 }
 
-.soo2{
-    background-color: white;
-    border-radius: 12px;
-    width: 272px;
+.one{
+    
+display: flex;
+color: white;
+flex-direction: column;
+align-self: flex-end;
+padding: var(--Corner-3, 12px) var(--Corner-2, 16px);
+border-radius: var(--Corner-3, 12px);
+background: var(--Primary, #005FF9);
+
+}
+.one:nth-child(1){
+    width: 70%;
+}
+.one:nth-child(3){
+    width: 60%;
+}
+
+.one p:nth-child(1){
+    color: var(--White, #FFF);
+
+/* Body/Regular */
+font-family: "Plus Jakarta Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 21px */
+text-align: start;
+}
+.strelki{
+    display: flex;
+    justify-content: end;
+}
+
+.strelki p{
+    color: var(--Background, #F9FAFB);
+/* Caption/Regular */
+font-family: "Plus Jakarta Sans";
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 18px */
+
+
+}
+
+.two{
+    display: flex;
+padding: var(--Corner-3, 12px) var(--Corner-2, 16px);
+flex-direction: column;
+width: 60%;
+
+border-radius: var(--Corner-3, 12px);
+background: var(--White, #FFF);
+}
+.two ol, p:nth-child(1){
+    color: var(--Black, #19191A);
+/* Body/Regular */
+font-family: "Plus Jakarta Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 21px */
+}
+.two ol{
     margin-left: 16px;
-    padding: 5px 16px 5px 16px;
-    margin-top: 12px;
-    margin-bottom: 12px;
 }
-.text2{
-    color: black;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 150%;
-    margin-bottom: -15px;
-    width: 240px;
-}
-.time2{
-    margin-left: 224px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+.two .time{
+    color: var(--Gray, #B0B0B0);
+    text-align: right;
+    
+    /* Caption/Regular */
+    font-family: "Plus Jakarta Sans";
     font-size: 12px;
-    line-height: 150%;
+    font-style: normal;
     font-weight: 400;
-    color: #B0B0B0;
+    line-height: 150%; /* 18px */
+
 }
 
-.soo4{
-    background-color: white;
-    border-radius: 12px;
-    width: 272px;
-    margin-left: 16px;
-    padding: 5px 16px 5px 16px;
-    margin-top: 12px;
-}
-.text4{
-    color: black;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 150%;
-    margin-bottom: -15px;
-    width: 240px;
-}
-.time4{
-    margin-left: 224px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 12px;
-    line-height: 150%;
-    font-weight: 400;
-    color: #B0B0B0;
-}
+
 
 
 .vvod{
-    width: 375px;
-    padding: 14px 16px 38px 16px;
-    background-color: white;
     display: flex;
-}
-.go{
+    align-items: center;
+    justify-content: space-between;
     background-color: white;
-    border: none;
-    width: 48px;
+    border-bottom: #000000;
+    padding: 14px 16px 0px 16px;
 }
-.input{
-    width: 285px;
-    margin-right: 10px;
-    border: none;
-    background-color: #F9FAFB;
-    height: 48px;
+
+.vvod div{
     border-radius: 8px;
-    color: #B0B0B0;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+background: var(--Primary, #005FF9);
+    display: flex;
+padding: var(--Corner-3, 12px);
+align-items: flex-start;
+gap: 10px;
+}
+input{
+    border: none;
+    background-color: #F9F9F9;
+}
+input::placeholder { color: var(--Gray, #B0B0B0);
+
+    /* Heading 5/Regular */
+    font-family: "Plus Jakarta Sans";
     font-size: 16px;
-    line-height: 150%;
+    font-style: normal;
     font-weight: 400;
-    padding-left: 14px;
-    padding-right: 14px;
-    padding-bottom: 10px;
-    padding-top: -2px;
+    line-height: 150%; /* 24px */; padding-left: 10%; }
+.vvod img{
+    display: flex;
+width: 24px;
+height: 24px;
+padding: 3.717px 2.84px;
+justify-content: center;
+align-items: center;
+}
+.knopkakakaito{
+    padding: 23px 0px 10px 0px;
 }

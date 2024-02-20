@@ -1,7 +1,7 @@
-const soo = document.getElementsByClassName('soo')[0];
+const sms = document.getElementsByClassName('sms')[0];
 const messages = [
-  { text: 'Привет, как дела?', sender: 'user' },
-  { text: 'Привет, у меня все хорошо!', sender: 'Alecsander' },
+  { text: 'привет, как дела?', sender: 'user' },
+  { text: 'привет, у меня все хорошо!', sender: 'Alecsander' },
   { text: 'Отлично!', sender: 'user' }
 ];
 
@@ -20,5 +20,5 @@ messages.forEach((message) => {
   textElement.innerText = message.text;
   messageElement.appendChild(textElement);
 
-  soo.appendChild(messageElement);
+  sms.appendChild(messageElement);
 });
