@@ -1,0 +1,26 @@
+.fact-input-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.fact-input-container input {
+    padding: 8px;
+    width: 60%;
+    margin-right: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.fact-input-container button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
