@@ -14,7 +14,7 @@ console.log(factsData)
     const factsList = document.getElementById("factsList");
 
     // Проходимся по каждой породе кошек и создаем соответствующий элемент списка
-    factsData.forEach(breed => {
+    factsData.forEach(facts => {
         // Создаем новый элемент li для текущей породы кошки
         const newLi = document.createElement("li");
         newLi.className = "facts__item";
@@ -23,13 +23,13 @@ console.log(factsData)
         // Breed
         const factBlock1 = document.createElement("div");
         factBlock1.className = "facts__block";
-        factBlock1.innerHTML = `<span class="fact__key">Fact:</span><span class="fact__name">${fact.fact}</span>`;
+        factBlock1.innerHTML = `<span class="fact__key">Fact: </span><span class="facts__name">${facts.fact}</span>`;
         newLi.appendChild(factBlock1);
 
         // Country
         const factBlock2 = document.createElement("div");
         factBlock2.className = "facts__block";
-        factBlock2.innerHTML = `<span class="fact__key">Country:</span><span class="fact__name">${fact.length}</span>`;
+        factBlock2.innerHTML = `<span class="fact__key">Length: </span><span class="facts__name">${facts.length}</span>`;
         newLi.appendChild(factBlock2);
 
         // Добавляем элемент li в список пород кошек
