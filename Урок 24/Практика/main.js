@@ -74,3 +74,45 @@ getCatBreeds()
 
 // Назначаем обработчик события на кнопку
 
+async function getCatFacts(limit){
+    const response = await fetch(`https://catfact.ninja/facts?limit=${limit}`);
+    const data = await response.json();
+    const factsData = data.data;
+    const factsList = document.getElementById('factsList')
+    console.log(factsList);
+    factsData.forEach(item => {
+        newLi = document.createElement('li');
+        newLi.className = 'facts__item';
+
+        const factBlock1 = document.createElement("div");
+        factBlock1.className = "facts__block";
+        factBlock1.innerHTML = `<span class="fact__key">Fact:</span><span class="fact__name">${item.fact}</span>`;
+        newLi.appendChild(factBlock1);
+
+        factsList.appendChild(newLi);
+    })
+}
+
+document.getElementById('input-button').addEventListener('click', () => {
+    let input = document.getElementById('input');
+    let inputText = document.getElementById('input').value;
+    if ((inputText != '') && (Number(inputText) > 0)){
+        input.value = '';
+        if (document.querySelector('.error__input')){
+            input.style.cssText = 'border: none';
+            document.querySelector('.error__input').remove();
+        }
+        while (document.querySelector('.facts__item')){
+            document.querySelector('.facts__item').remove();
+        }
+        getCatFacts(inputText).catch(error => {
+            console.error('Произошла ошибка:', error);
+        })
+    }else if (document.querySelector('.error__input') == null) {
+        input.style.cssText = 'border: 2px solid red';
+        const er = document.createElement('label');
+        er.className = 'error__input'
+        er.innerText = 'Enter a number greater than zero';
+        document.getElementById('form-dop').prepend(er)
+    }
+})
