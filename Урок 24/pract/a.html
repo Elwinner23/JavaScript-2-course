@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="a.css">
+</head>
+<body>
+    <form class="form" id="form">
+        <div class="form">
+          <label for="num" id="lab">Number of desired facts: </label>
+          <input type="number" name="num" min="1" id="num" required />
+          <input type="button" value="Enter" id="fsubmit">
+          <!-- <button id="ent">Enter</button> -->
+        </div>
+        <!-- <div class="form">
+            <input type="submit" value="Send!" />
+        </div> -->
+    </form>
+    <!-- <form action=""></form>
+        <input type="text">
+        <input type="submit" formmethod="get | post" />
+        <button>Отправить</button> -->
+    <main class="container">
+        <h1>
+            There will be interesting facts about cats here
+        </h1>
+        <div class="facts" id="facts">
+            <ul class="facts__list list-reset" id="factsList"></ul>
+        </div>
+    </main>
+    <script src="a.js" defer></script>
+</body>
+</html>
