@@ -1,9 +1,9 @@
 /**
  * Функция для получения списка пород кошек с использованием API "Cat Fact Ninja"
  */
-async function getCatBreeds() {
+async function getCatBreeds(n) {
     // Отправляем запрос на сервер для получения данных о породах кошек
-    const response = await fetch('https://catfact.ninja/breeds?limit=10');
+    const response = await fetch(`https://catfact.ninja/breeds?limit=${n}`);
 
     // Разбираем ответ сервера в формате JSON
     const data = await response.json();
@@ -56,12 +56,22 @@ console.log(breedsData)
 }
 
 // Вызываем функцию для получения списка пород кошек
-getCatBreeds()
-    .catch(error => {
-        // В случае ошибки выводим сообщение об ошибке в консоль
-        console.error('Произошла ошибка:', error);
-    });
+// getCatBreeds(1)
+//     .catch(error => {
+//         // В случае ошибки выводим сообщение об ошибке в консоль
+//         console.error('Произошла ошибка:', error);
+//     });
+button = document.getElementById('but')
 
+button.onclick = function() {
+    var val = document.getElementById('inp').value;
+    document.getElementById('str').innerHTML = "Вы ввели: " + val;
+    let n = parseInt(val);
+    console.log(n);
+    getCatBreeds(n).catch(error => {
+                console.error('Произошла ошибка:', error);
+            });
+};
 /**
  * Функция для получения фактов о котах
  * @param {number} count - количество фактов, которые необходимо получить
