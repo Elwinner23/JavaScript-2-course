@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ввод количества фактов</title>
+    <title>CatFacts</title>
     <link rel="stylesheet" href="tasks.css">
-</head>
-<body>
-    <div class="fact-input-container">
-        <span>Введите количество фактов:</span>
-        <input type="number" id="factCountInput" min="1" placeholder="Количество фактов">
-        <button type="button" onclick="sendRequest()">Отправить</button>
-    </div>
-    <div id="factResults"></div>
     <script src="tasks.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="container">
+        <h1>Напиши, сколько фактов про котиков ты хочешь узнать</h1>
+        <div class="inputbox">
+            <input type="text" id="num">
+            <button id="send">Отправить</button>
+        </div>
+        <div class="facts" id="facts">
+            <ul class="facts__list list-reset" id="factsList"></ul>
+        </div>
+        <div id="text_error">
+        </div>
+    </main>
+    <footer class="container">
+        <p>Это всё =(</p>
+    </footer>
 </body>
 
 </html>
