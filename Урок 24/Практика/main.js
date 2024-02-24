@@ -64,13 +64,23 @@ console.log(breedsData)
 button = document.getElementById('but')
 
 button.onclick = function() {
-    var val = document.getElementById('inp').value;
-    document.getElementById('str').innerHTML = "Вы ввели: " + val;
-    let n = parseInt(val);
-    console.log(n);
-    getCatBreeds(n).catch(error => {
-                console.error('Произошла ошибка:', error);
-            });
+    let but = document.getElementById('inp')
+    var val = but.value;
+    if (val != "" && val > 0){
+        document.getElementById('str').innerHTML = "Вы ввели: " + val;
+        but.style = 'border: None';
+        let n = parseInt(val);
+        console.log(n);
+        getCatBreeds(n).catch(error => {
+                    console.error('Произошла ошибка:', error);
+                });
+    } else {
+        but.style = 'border: 2px solid red;';
+        document.getElementById('str').innerHTML = "Enter the number > 0";
+        getCatBreeds(0).catch(error => {
+            console.error('Произошла ошибка:', error);
+        });
+    }
 };
 /**
  * Функция для получения фактов о котах
