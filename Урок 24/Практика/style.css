@@ -92,3 +92,27 @@ h1 {
     padding: 2px 7px;
     margin-left: 10px;
 }
+
+#num{
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: aquamarine;
+    margin-bottom: 20px;
+}
+
+#but{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border-style: solid;
+    background-color: aquamarine;
+    margin-bottom: 20px;
+    border: none;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+#but:hover{
+    background-color: rgb(38, 103, 81);
+}

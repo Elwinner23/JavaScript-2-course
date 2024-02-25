@@ -4,36 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CatCatCat</title>
-
+    <title>CatFacts</title>
     <link rel="stylesheet" href="style.css">
-
-    <script src="./main.js" defer></script>
+    <script src="main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="container">
-        <p class="logo">
-            Cats Fact
-        </p>
-    </header>
     <main class="container">
-        <h1>
-            There will be interesting facts about cats here
-        </h1>
-
-        <div class="choice">
+        <h1>How many facts do you whant to know?</h1>
+        <div class="inputbox">
             <input type="text" id="num">
-            <button id="send">Отправить</button>
+            <button id="but">Send</button>
         </div>
-        <div class="breeds" id="breeds">
-            <ul class="breeds__list list-reset" id="breedsList"></ul>
+        <div class="facts" id="facts">
+            <ul id="factsList"></ul>
+        </div>
+        <div id="error-text">
         </div>
     </main>
     <footer class="container">
-        <p>
-            that's all
-        </p>
+        <p>А теперь с тебя анекдот))</p>
     </footer>
 </body>
 
