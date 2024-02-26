@@ -1,0 +1,109 @@
+/* общие настройки */
+html {
+    overflow-x: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+label{
+    color: #c90707;
+
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e5e5e5;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.container {
+    max-width: 1024px;
+    padding: 0 20px;
+    margin: 0 auto;
+    overflow: scroll;
+}
+
+/* сбросы */
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.btn-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+input{
+    margin-bottom: 20px;
+    border-radius: 50px;
+    padding: 5px;
+}
+button{
+    background: #f8ee8e;
+    border-radius: 50px;
+    padding: 5px;
+}
+.logo {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.facts__item {
+    padding: 10px 20px;
+    border: 3px solid #e0d14d;
+    margin-bottom: 20px;
+    border-radius: 200px;
+    
+    
+}
+
+
+.fact__key {
+    font-weight: 600;
+    padding-right: 5px;
+}
+
+
+
+ul{
+    list-style-type: "😺";
+    margin-left: 10px;
+    
+  
+}
