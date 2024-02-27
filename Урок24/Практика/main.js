@@ -3,7 +3,7 @@
  */
 async function getCatBreeds() {
 
-    let count = document.getElementById("limit__input")
+    let count = document.getElementById("limit__input").value
 
     let link = `https://catfact.ninja/breeds?limit=${count}`;
     // Отправляем запрос на сервер для получения данных о породах кошек
@@ -11,11 +11,14 @@ async function getCatBreeds() {
 
     // Разбираем ответ сервера в формате JSON
     const data = await response.json();
-    console.log(data)
     // Получаем массив объектов с данными о породах кошек
     const breedsData = data.data;
+    console.log(breedsData)
     // Находим элемент, в который будем добавлять список пород кошек
+
     const breedsList = document.getElementById("breedsList");
+
+    breedsList.innerHTML = '';
 
     // Проходимся по каждой породе кошек и создаем соответствующий элемент списка
     breedsData.forEach(breed => {
@@ -75,4 +78,4 @@ async function getCatBreeds() {
 
 let button = document.getElementById("sendFacts__button");
 
-button.addEventListener("click", getCatBreeds())
+button.addEventListener("click", getCatBreeds)
