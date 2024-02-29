@@ -20,7 +20,7 @@ const sort1 = (array) => {
     const greater = array.slice(1).filter(el => el > pivot);
     
 
-    return sort1 (less).concat(pivot, sort1(greater)); //сортируем массивы и соединяем массивы
+    return sort1 (less).concat(pivot, sort1(greater)); //сортируем массивы и соединяем массивы и опорный элемент
   
   }
   
