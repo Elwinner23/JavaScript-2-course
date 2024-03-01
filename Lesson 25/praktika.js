@@ -47,3 +47,53 @@ function filterTransactions(list, criteria){
 
 console.log(filterTransactions(transactions, 'Одежда'))
 
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+//                                                                    ДЗ
+
+
+// Пузырьковый метод
+function bubble_sorting(array){
+    for (let i = 0; i < array.length - 1; i ++){
+        for (let j = 0; j < array.length - 1 - i; j ++){
+            if (array[j] > array[j + 1]){
+                let per = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = per;
+            };
+        };
+    };
+    return array;
+};
+
+// Сортировка перемешиванием
+
+function sorting_by_mixing(array){
+    for (let i = 1; i < array.length; i++){
+        while (i > 0 && array[i] < array[i - 1]){
+            let per = array[i];
+            array[i] = array[i - 1];
+            array[i - 1] = per;
+            i -= 1;
+        };
+    };
+    return array;
+};
+console.log(sorting_by_mixing(a))
+
+// Сортировка расчёской
+
+function sorting_with_a_comb(array){
+    const l = array.length;
+    const factor = 1.247;
+    let gapFactor = l / factor;
+    while (gapFactor > 1) {
+        const gap = Math.round(gapFactor);
+        for (let i = 0, j = gap; j < l; i++, j++) {
+            if (array[i] > array[j]) {
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+        gapFactor = gapFactor / factor;
+    };
+    return array;
+}
