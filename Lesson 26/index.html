@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="module"></script>
+  </head>
+<body>
+      <div id="form-container">
+        <div id="card-front">
+          <div id="shadow"></div>
+          <div id="image-container">
+            <span id="card-image">
+              </span>
+          </div>      
+          <label for="card-number">
+              Номер карты
+            </label>
+          <input type="text" maxlength="19" id="card-number" placeholder="0000 0000 0000 0000" length="16">
+          <div id="cardholder-container">
+            <label for="card-holder">Получатель
+            </label>
+            <input type="text" id="card-holder" placeholder="OLEG OLEG" />
+          </div>
+          <div id="exp-container">
+            <label for="card-exp">
+                Дата получения
+              </label>
+            <input maxlength="2" id="card-month" type="text" placeholder="MM" length="2">
+            <input maxlength="2" id="card-year" type="text" placeholder="YY" length="2">
+          </div>
+              <div id="cvc-container">
+            <label for="card-cvc">CVC</label>
+            <input maxlength="3" id="card-cvc" placeholder="000" type="text" min-length="3" max-length="4">
+          </div>
+        </div>
+        <div id="card-back">
+          <div id="card-stripe">
+          </div>
+      
+        </div>
+        <input type="text" id="card-token"/>
+        <button type="button" id="card-btn">Отправить</button>      
+      </div>
+</body>
+</html>
