@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="stylesheet" href="tasks.css">
+    <script src="tasks.js" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main-conteiner">
+        <div id="front">
+            <div id="shadow"></div>
+            <div id="main-image">
+            <span id="image"></span>
+        </div>      
+        <p id="header">Введите данные для оплаты</p>
+        <label for="card-number">Номер карты</label>
+        <input type="text" maxlength="19" id="card-number" placeholder="0000 0000 0000 0000" length="16">
+        <div id="cardholder-container">
+            <label for="card-holder">Имя владельца</label>
+            <input type="text" id="card-holder" placeholder="IVAN IVANOV" />
+        </div>
+        <div id="exp-container">
+            <label for="card-exp">Срок действия</label>
+            <input maxlength="2" id="card-month" type="text" placeholder="MM" length="2">
+            <input maxlength="2" id="card-year" type="text" placeholder="YY" length="2">
+        </div>
+        <div id="cvc-container">
+            <label for="card-cvc">CVV/CVV2</label>
+            <input maxlength="3" id="card-cvc" placeholder="000" type="text" min-length="3" max-length="4">
+            <p id="cvv-bottom">3 цифры сзади</p>
+        </div>
+        </div>
+        <div id="back">
+            <div id="card-stripe"></div>
+        </div>
+        <input type="text" id="card-token"/>
+        <button type="button" id="card-btn">Оплатить</button>      
+    </div>
+</body>
+</html>
