@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="binking">
+      <form class="binking__form">
+        <div class="binking__new-card-form">
+          <div class="binking__panels">
+            <div class="binking__panel binking__front-panel">
+              <img class="binking__form-bank-logo binking__hide">
+              <img class="binking__form-brand-logo binking__hide">
+              <div class="binking__front-fields">
+                <input name="cardnumber" autocomplete="cc-number" inputmode="numeric" pattern="[0-9 ]*" class="binking__field binking__number-field" type="text" placeholder="0000 0000 0000 0000">
+                <label class="binking__label binking__date-label">Valid through</label>
+                <input name="ccmonth" autocomplete="cc-exp-month" inputmode="numeric" pattern="[0-9]*" class="binking__field binking__month-field binking__date-field" type="text" placeholder="MM">
+                <input name="ccyear" autocomplete="cc-exp-year" inputmode="numeric" pattern="[0-9]*" class="binking__field binking__year-field binking__date-field" type="text" placeholder="YY">
+              </div>
+            </div>
+            <div class="binking__panel binking__back-panel">
+              <input name="cvc" autocomplete="cc-csc" inputmode="numeric" pattern="[0-9]*" class="binking__field binking__code-field" type="password">
+              <label class="binking__label binking__code-label">Security<br />code</label>
+            </div>
+          </div>
+        </div>
+        <div class="binking__form-bottom">
+          <p class="binking__error binking__hide"></p>
+          <button class="binking__submit-button binking__button" type="submit">Оплатить</button>
+        </div>
+        <div class="binking__trust-logos">
+          <img class="binking__trust-logo" src="https://static.binking.io/trust-logos/secure-connection.svg" alt="">
+          <img class="binking__trust-logo" src="https://static.binking.io/trust-logos/mastercard.svg" alt="">
+          <img class="binking__trust-logo" src="https://static.binking.io/trust-logos/mir.svg" alt="">
+          <img class="binking__trust-logo" src="https://static.binking.io/trust-logos/visa.svg" alt="">
+          <img class="binking__trust-logo" src="https://static.binking.io/trust-logos/pci-dss.svg" alt="">
+        </div>
+      </form>
+      <div class="binking__success binking__hide">
+        <h2 class="binking__title">Payment succeed</h2>
+        <button class="binking__reset-button binking__button" type="button">Back to payment form</button>
+      </div>
+    </div>
+    <script src="https://unpkg.com/imask@6"></script>
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@5"></script>
+    <script src="https://unpkg.com/binking"></script>
+    <script src="script.js"></script>
+</body>
+</html>
