@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#card{
+    background-color: black;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+    height: 140px;
+    
+}
+#nomer{
+    width: 200px;
+    
+}
+
+
+.vvodcarta{
+    background: white;
+    color: black;
+    font-size: 10px;
+    border-radius: 10px;
+    padding: 2px 0px 2px 10px;
+}
+
+.vvodcarta p{
+    padding: 0px 0px 0px 0px;
+}
+input{
+    border: none;
+    font-size: 10px;
+    
+    
+}
+input::placeholder{
+    font-size: 10px;
+    padding: 3px 0px 3px 0px;
+}
+
+.vvod{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    font-size: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    width: 200px;
+}
+.vvod input{
+    width: 50px;
+    
+}
+
+.vtoroe{
+    background: white;
+    color: black;
+    padding: 2px 10px 2px 10px;
+    font-size: 10px;
+    border-radius: 10px;
+}
+
+.vvodemail{
+    background: white;
+    color: black;
+    padding: 2px 10px 2px 10px;
+    font-size: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    width: 180px;
+}
+
+
+
+
+button{
+    background: #e67416;
+    border-radius: 10px;
+    font-size: 10px;
+    padding: 10px 40px;
+    color: rgb(223, 198, 198);
+    border: none;
+    margin-left: 15%;
+}
