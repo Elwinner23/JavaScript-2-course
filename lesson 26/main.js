@@ -9,19 +9,21 @@ inputCarta.addEventListener('input', function(e) {
   if (formattedText.length < 20) {
     e.target.style.border = '2px solid red';
   } else {
-    e.target.style.border = '1px solid #ccc';
+    e.target.style.border = 'none';
+
   }
-});
-
-
-document.getElementById('nomer').oninput = function () {
-  let cardNum = this.value;
-  if (cardNum.trim().length > 5) {
-    let cardInfo = new CardInfo(cardNum.trim(), {
+  if (formattedText.length > 5) {
+    let cardInfo = new CardInfo(formattedText, {
       banksLogosPath: './node_modules/card-info/dist/banks-logos/',
       brandsLogosPath: './node_modules/card-info/dist/brands-logos/'
     });
-  }}
+    console.log(cardInfo.bankName);
+    console.log(cardInfo.brandLogo);
+    document.querySelector(".imagee").style.backgroundImage = `url(${cardInfo.brandLogo})`;
+  }
+});
+
+ 
 
 
 let inputsrok = document.getElementById("one");
@@ -30,6 +32,12 @@ inputsrok.addEventListener('input', function(e) {
   const inputText = e.target.value.replaceAll(' ', '').replace(/\D/g, '').slice(0, 4);
   const formattedText = inputText.replace(/(.{2})/g, '$1/');
   e.target.value = formattedText.trim();
+  if (formattedText.length < 5) {
+    e.target.style.border = '2px solid red';
+  } else {
+    e.target.style.border = 'none';
+
+  }
 });
 
 
@@ -39,6 +47,12 @@ inputKod.addEventListener('input', function(e) {
   const inputText = e.target.value.replaceAll(' ', '').replace(/\D/g, '').slice(0, 3);
   const formattedText = inputText.replace(/(.{0})/g, '$1');
   e.target.value = formattedText.trim();
+  if (formattedText.length < 3) {
+    e.target.style.border = '2px solid red';
+  } else {
+    e.target.style.border = 'none';
+
+  }
 });
 
 
