@@ -66,8 +66,33 @@ inputKod.addEventListener('input', function(e) {
 });
 
 
+const email_regexp = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
 
+function isEmailValid(value) {
+  return email_regexp.test(value);
+}
 
+const email = document.getElementById('email');
+email.addEventListener('input', function (e) {
+  if (isEmailValid(email.value)) {
+    email.style.border = '2px solid green';
+  } else {
+    email.style.border = '2px solid red';
+  }
+});
+
+const button = document.querySelector("button");
+
+function checkConditions() {
+  if (inputCarta.value.length === 19 && inputsrok.value.length === 3 && email.style.border === "green") {
+    button.style.color = "white";
+  } else {
+    button.style.backgroundColor = ""; 
+  }}
+email.addEventListener("input", checkConditions);
+inputKod.addEventListener("input", checkConditions);
+inputsrok.addEventListener("input", checkConditions);
+inputCarta.addEventListener("input", checkConditions);
 
 // import { isValid,isExpirationDateValid,isSecurityCodeValid,getCreditCardNameByNumber } from './node_modules/creditcard.js/dist/creditcard.js';
 
