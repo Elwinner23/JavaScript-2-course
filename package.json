@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "card-validator": "^9.1.0",
+    "parcel": "^2.12.0",
+    "process": "^0.11.10",
+    "react": "^18.2.0",
+    "require": "^2.4.20"
+  },
+  "scripts": {
+    "dev": "parcel tasks.html"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
