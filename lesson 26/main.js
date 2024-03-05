@@ -1,3 +1,4 @@
+import { cardValidator } from './index.js';
 
 
 let inputCarta = document.getElementById("nomer");
@@ -12,6 +13,8 @@ inputCarta.addEventListener('input', function(e) {
     e.target.style.border = 'none';
 
   }
+
+  
   if (formattedText.length > 5) {
     let cardInfo = new CardInfo(formattedText, {
       banksLogosPath: './node_modules/card-info/dist/banks-logos/',
@@ -21,6 +24,13 @@ inputCarta.addEventListener('input', function(e) {
     console.log(cardInfo.brandLogo);
     document.querySelector(".imagee").style.backgroundImage = `url(${cardInfo.brandLogo})`;
   }
+  let cardValid = cardValidator(formattedText);
+    if (cardValid) {
+      console.log('Валидна');
+    } else {
+      console.log('Не валидна');
+    }
+  
 });
 
  

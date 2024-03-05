@@ -2,7 +2,9 @@
   "dependencies": {
     "creditcard.js": "^3.0.33",
     "creditcards": "^4.2.0",
-    "card-info": "^1.2.4"
+    "card-info": "^1.2.4",
+    "cardvalidator-ks": "^1.0.1",
+    "card-validator": "^9.1.0"
   },
   "scripts": {
     "dev": "parcel index.html"
