@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="credit-card">
+  <div class="credit-card-form">
+    <form action="submit">
+      <img src="" alt="" class="card-image">
+      <div class="credit-card-number">
+        <label for="card-number" id="numlab">Номер карты:</label>
+        <input type="text" id="card-number" name="card-number" class="credit-input" maxlength="19" placeholder="XXXX XXXX XXXX XXXX">
+      </div>
+  
+      <div class="credit-card-info">
+        <div class="credit-card-info-item">
+          <label for="expiry-date" id="lab2">Срок действия:</label>
+          <input type="text" id="expiry-date" name="expiry-date" maxlength="5" placeholder="ММ/ГГ" pattern="\d{2}/\d{2}">
+        </div>
+
+        <div class="credit-card-info-item">
+          <label for="cvv" id="lab3">CVV:</label>
+          <input type="text" id="cvv" name="cvv" maxlength="3" placeholder="XXX">
+        </div>
+      </div>
+  
+    <div class="credit-card-email">
+      <label for="Email" id="lab4">Email для отправки чека:</label>
+      <input type="email" id="inp4" name="Email" placeholder="vvv@qq.qq">
+      <img src="" alt="" class="card-logo">
+    </div>
+
+    
+    </form>
+  </div>
+  <button id="button" type="submit" disabled>Оплатить</button>
+</div>
+
+<script src="./node_modules/card-info/dist/card-info.min.js"></script>
+<script src="script.js" defer></script>
+</body>
+</html>
