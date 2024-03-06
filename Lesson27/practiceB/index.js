@@ -1,4 +1,5 @@
-const http = require('http');
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 
 
 // Функция для генерации случайного статус-кода
@@ -28,3 +29,10 @@ const port = 3000;
 server.listen(port, () => {
    console.log(`Server running at http://localhost:${port}/`);
 });
+
+
+let button = document.getElementById("ident");
+
+inputNumber.addEventListener('click', (event) => {
+   button.style.backgroundColor = 'red';
+ });
