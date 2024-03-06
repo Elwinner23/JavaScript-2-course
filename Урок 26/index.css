@@ -1,0 +1,95 @@
+.card-wrapper{
+    width: 751px;
+    height: 381px;
+/*    border: 1px solid grey;*/
+    position: relative;
+}
+.card-back, .card-front{
+    width: 535px;
+    height: 343px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    position: absolute;
+}
+.card-back{
+    right: 0;
+    bottom: 0;
+    background: #ececec;
+}
+.card-front{
+    background: #fff;
+   /* background: rgb(53, 49, 49);*/
+}
+.card-back-line{
+    width: 100%;
+    height: 80px;
+    background: #c0c0c0;
+    position: absolute;
+    top: 50px;
+}
+#cvv{
+    position: absolute;
+    right: 40px;
+    bottom: 112px;
+    width: 100px;
+    padding: 5px;
+    font-style: 40px;
+    text-align: center;
+}
+.card-image{
+    height: 60px;
+    position: absolute;
+    left: 30px;
+    top: 40px;
+}
+.card-logo{
+    height: 50px;
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+}
+#card-number{
+    position: absolute;
+    width: 90%;
+    margin: 0 5%;
+    background: #f1f1f1;
+    font-style: 40px;
+    padding: 5px;
+    bottom: none;
+    top: 145px;
+    outline: none;
+}
+#card-data{
+    position: absolute;
+    background: #f1f1f1;
+    font-style: 40px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    width: 60px;
+    text-align: center;
+    bottom: 40px;
+    left: 5%;
+}
+.pay__button{
+    border: 1px solid black;
+    color: white;
+    background-color: grey;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    transition: all 0.4s;
+}
+.pay__button:hover{
+    color: black;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+/*.p{
+    position: absolute;
+}
