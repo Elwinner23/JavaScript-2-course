@@ -1,5 +1,5 @@
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
+import cors from "C:\Users\Daria\OneDrive\Рабочий стол\kod\JavaScript-2-course\Lesson27\practiceB\node_modules\cors\lib\index.js"
+const http = require('http');
 
 
 // Функция для генерации случайного статус-кода
@@ -20,19 +20,13 @@ const server = http.createServer((req, res) => {
 
 
    // Отправка ответа
-   res.end(`Response with status code: ${statusCode}\n`);
+   res.end("Response with status code: ${statusCode}\n");
 });
 
-
+ server.use(cors())
 const port = 3000;
 // Слушаем порт 3000
 server.listen(port, () => {
-   console.log(`Server running at http://localhost:${port}/`);
+   console.log("Server running at http://localhost:${port}/");
 });
 
-
-let button = document.getElementById("ident");
-
-inputNumber.addEventListener('click', (event) => {
-   button.style.backgroundColor = 'red';
- });
