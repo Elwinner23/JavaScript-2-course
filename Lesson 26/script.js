@@ -17,17 +17,10 @@ function proverka(){
     validateCVVORCVCCode(card_cvc.value) &&
     card_name.value.length >= 5){
         button.style.cssText = 'background-color: #2c79ff;';
-        button.addEventListener('click', () => {
-            card_number.value = '';
-            card_date.value = '';
-            card_cvc.value = '';
-            card_name.value = '';
-            button.style.cssText = 'background-color: #bad3fe;';
-            document.getElementById('foto').style.backgroundImage = 'none';
-        })
+        button.disabled = false;
     }else{
-        document.getElementById('oplat').style.cssText = 'background-color: #bad3fe;';
-        button.addEventListener('click', () => {})
+        button.style.cssText = 'background-color: #bad3fe;';
+        button.disabled = true;
     };
 };
 

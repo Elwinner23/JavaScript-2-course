@@ -599,17 +599,10 @@ function proverka() {
     const button = document.getElementById("oplat");
     if (validateCreditCardNumber(card_number.value.replace(/\s/g, "")) && card_number.value.replace(/\s/g, "").length >= 14 && validateExpirationDate(card_date.value.slice(0, 2), "20" + card_date.value.slice(3, 5)) && validateCVVORCVCCode(card_cvc.value) && card_name.value.length >= 5) {
         button.style.cssText = "background-color: #2c79ff;";
-        button.addEventListener("click", ()=>{
-            card_number.value = "";
-            card_date.value = "";
-            card_cvc.value = "";
-            card_name.value = "";
-            button.style.cssText = "background-color: #bad3fe;";
-            document.getElementById("foto").style.backgroundImage = "none";
-        });
+        button.disabled = false;
     } else {
-        document.getElementById("oplat").style.cssText = "background-color: #bad3fe;";
-        button.addEventListener("click", ()=>{});
+        button.style.cssText = "background-color: #bad3fe;";
+        button.disabled = true;
     }
 }
 card_number.addEventListener("input", function(e) {
