@@ -3,8 +3,8 @@ function fetchFromDB() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const userFromDB = { id: 1, name: "John Doe", from: "Database" };
-      //resolve(userFromDB); // Расскомментируйте эту строку для успешного выполнения
-      reject("Ошибка: Данные из базы данных недоступны!"); // Расскомментируйте эту строку для симуляции ошибки
+      resolve(userFromDB); // Расскомментируйте эту строку для успешного выполнения
+      // reject("Ошибка: Данные из базы данных недоступны!"); // Расскомментируйте эту строку для симуляции ошибки
     }, 1000);
   });
 }
@@ -14,7 +14,7 @@ function fetchFromAPI() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const userFromAPI = { id: 2, name: "Jane Smith", from: "API" };
-      //resolve(userFromAPI); // Расскомментируйте эту строку для успешного выполнения
+      resolve(userFromAPI); // Расскомментируйте эту строку для успешного выполнения
       reject("Ошибка: Данные из внешнего API недоступны!"); // Расскомментируйте эту строку для симуляции ошибки
     }, 1500);
   });

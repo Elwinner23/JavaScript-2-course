@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #but{
+            display: block;
+            margin: auto;
+            width: 150px;
+            height: 30px;
+        }
+        #kvad{
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 30px;
+            border: 1px solid black;
+        }
+    </style>
+    <main>
+        <div id="kvad"></div>
+        <button id="but">Получить данные</button>
+    </main>
+    <script>
+        async function getCatFacts(){
+            const response = await fetch('http://localhost:3000');
+            return response.status
+        };
+        document.getElementById('but').addEventListener('click', () => {
+            getCatFacts().catch(event => {
+                console.log('Произошла ошибка:', event)
+            }).then(result => {
+                const kvad = document.getElementById('kvad');
+            switch(result){
+                case (200): 
+                    kvad.style.cssText = 'background-color: green;';
+                    break;
+                case 201:
+                    kvad.style.cssText = 'background-color: yellow;';
+                    break;
+                case 400:
+                    kvad.style.cssText = 'background-color: red;';
+                    break;
+                case 401:
+                    kvad.style.cssText = 'background-color: darkred;';
+                    break;
+                case 404:
+                    kvad.style.cssText = 'background-color: blue;';
+                    break;
+                case 500:
+                    kvad.style.cssText = 'background-color: black;';
+                    break;
+                }
+            })        
+        });
+    </script>
+</body>
+</html>
