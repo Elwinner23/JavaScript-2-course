@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body class="bg-slate-800 text-blue-200">
+    <main>
+        <section>
+            <div id="card" class="flex justify-center">
+                <div class="border-2 rounded-xl space-y-2 px-3 py-3 my-6">
+
+                    <div class="flex flex-col gap-1">
+                        <span>Номер карты</span>
+                        <input id="card-number" class="border rounded-sm text-black px-2" placeholder="0000 0000 0000 0000" oninput="if(value.length>16)value=value.slice(0,16)" type="number">
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                        <span>Срок действия</span>
+                        <div class="flex gap-2">
+                        <input id= "card-time-one" class="border rounded-sm text-black text-center" placeholder="01" oninput="if(value.length>2)value=value.slice(0,2)" type="number">
+                        <p class="text-xl">/</p>
+                        <input id="card-time-two" class="border rounded-sm text-black text-center" placeholder="24" oninput="if(value.length>2)value=value.slice(0,2)" type="number">
+                    </div>
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                        <span>Имя владельца</span>
+                        <input id="card-name" class="border rounded-sm text-black px-2" placeholder="OLEG FOMIN" type="text">
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                        <span>CVC/CVV</span>
+                        <input id="card-cvс" placeholder="000" class="border rounded-sm text-black px-2" oninput="if(value.length>3)value=value.slice(0,3)" type="number">
+                    </div>
+                    <div class="flex justify-center py-2">
+                        <button onclick="card()" class="bg-white px-3 py-2 rounded-full text-black font-bold hover:bg-blue-400 transition-all ease-linear">Оплатить</button>
+                    </div>
+                </div>
+            </div>
+            <div id="the-payment-has-been-completed" class="flex justify-center hidden my-5">
+                <div class="border-2 rounded-xl">
+                    <div class="py-10 px-10 space-y-4">
+                        <svg class="animate-bounce" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 517.062 517.062" style="enable-background:new 0 0 517.062 517.062;" xml:space="preserve"><circle style="fill:#3DB39E;" cx="256" cy="258.531" r="256"/><path style="fill:#37A18E;" d="M499.43,179.284c-7.25-22.287-17.449-43.228-30.172-62.362l-224.087,233.4l0.451,25.974l10.578-0.067 L499.43,179.284L499.43,179.284z"/><path style="fill:#F8F8F8;" d="M512.389,103.303l-45.65-45.102c-6.231-6.159-16.338-6.159-22.569,0L249.032,259.202l-84.152-83.149 c-6.241-6.159-16.338-6.159-22.574,0l-40.463,39.982c-6.231,6.154-6.231,16.138,0,22.292l135.06,133.432 c3.599,3.558,8.479,4.992,13.169,4.439c4.69,0.548,9.569-0.881,13.169-4.439l249.149-246.159 C518.62,119.441,518.62,109.462,512.389,103.303L512.389,103.303z"/><path style="fill:#EBEBEB;" d="M263.24,371.76l249.149-246.159c6.231-6.159,6.231-16.138,0-22.298l-7.45-7.363L248.648,348.024 L107.5,210.439l-5.652,5.591c-6.231,6.154-6.231,16.138,0,22.292L236.902,371.76c3.599,3.558,8.479,4.992,13.169,4.439 C254.761,376.752,259.64,375.324,263.24,371.76L263.24,371.76z"/></svg>
+                        <h1 class="animate-pulse">Оплата прошла успешна</h1>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+<script src="js/script.js"></script>
+</body>
+</html>
