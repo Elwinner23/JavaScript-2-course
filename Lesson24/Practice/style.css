@@ -1,0 +1,113 @@
+/* общие настройки */
+html {
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e5e5e5;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container {
+  max-width: 1024px;
+  padding: 0 20px;
+  margin: 0 auto;
+  overflow: scroll;
+}
+
+/* сбросы */
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+.breeds__item,
+.fact_item {
+  padding: 10px 20px;
+  border: 1px solid #ea5a0a;
+  margin-bottom: 20px;
+}
+
+.breed__key,
+.fact_key {
+  font-weight: 700;
+  padding-right: 5px;
+}
+
+.btn-facts {
+  border: 1px solid black;
+  padding: 2px 7px;
+  margin-left: 10px;
+}
+.senderBlock {
+  max-width: 800px;
+  height: 30px;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  margin-bottom: 20px;
+}
+#factCount {
+  padding: 10px;
+  columns: 1/2;
+}
+
+#send_fact_count {
+  columns: 2/3;
+}
+.error_input {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 5px;
+  text-align: center;
+  font-size: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
