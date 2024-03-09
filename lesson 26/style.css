@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.all_card {
+    margin-top: 100px;
+}
+
+.card_form_all {
+    margin: auto;
+    height: 200px;
+    width: 350px;
+    background-color: aqua;
+    background-image: url(./zemlya-planeta-fantastika.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+p {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 12px;
+}
+
+#number_card {
+    text-align: left;
+    padding: 0;
+    font-size: 14px;
+}
+
+#form_1{
+    margin: 15px;
+}
+
+#input {
+    width: 200px;
+    border: none;
+    border-radius: 2px;
+    height: 18px;
+}
+
+.date_card {
+    height: 35px;
+    margin: 15px;
+}
+
+.input_dadte {
+    border: none;
+    border-radius: 2px;
+    width: 60px;
+    height: 18px;
+}
+
+#form_dadte {
+    display: flex;
+    margin-top: 2px;
+}
+
+#text_dadte {
+    margin: 0;
+    padding: 0 10px;
+    text-align: start;
+}
+
+#validity {
+    margin: 0;
+    text-align: start;
+    padding: 0;
+    font-size: 16px;
+}
+
+#card_name_people {
+    height: 35px;
+    margin: 15px;
+}
+
+#card_name_people_text {
+    margin: 0;
+    padding: 0;
+    text-align: start;
+}
+
+#numericInput3 {
+    border: none;
+    border-radius: 2px;
+    width: 250px;
+    height: 18px;
+}
+
+input:focus {
+    padding-left: 2px;
+    outline: 0;
+    border: 0;
+}
+
+input::placeholder {
+    padding-left: 2px;
+}
+
+input {
+    padding-left: 2px;
+}
+
+#b {
+    display: none;
+}
+
+.card_back_all {
+    margin-top: 50px;
+    height: 200px;
+    width: 350px;
+    background-color: aqua;
+    background-image: url(./blank-blue-halftone-background_53876-114466.jpg); 
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+#poloska {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    background-color: black;
+}
+
+#cvc_kod {
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: start;
+    padding: 0;
+    font-size: 16px;
+}
+
+#numericInput2 {
+    border: none;
+    border-radius: 2px;
+    width: 250px;
+    height: 18px;
+    margin-left: 20px;
+    margin-top: 10px;
+}

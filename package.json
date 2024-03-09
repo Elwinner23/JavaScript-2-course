@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "card-validator-utils": "^1.0.6",
+    "i": "^0.3.7"
+  }
+}

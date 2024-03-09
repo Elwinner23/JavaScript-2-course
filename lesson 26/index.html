@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank card</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="all_card">
+            <div class="card_form_all">
+
+            <div class="cheap">
+                <label for="card_number">
+                <div class="number_card">
+                    <p>Введите данные карты для оплаты</p>
+                    <form id="form_1" action="">
+                            <p id="number_card">Номер карты</p> 
+                            <input id="input" type="text" placeholder="0000 0000 0000 0000">
+                            <button id="b" hidden>GO!</button>
+                    </form>
+                </div>
+            </label>
+            </div>
+
+            <div class="date_card">
+                <p id="validity">Срок действия</p>
+                <label for="date">
+                <form id="form_dadte" action="">
+                        <input type="text" class="input_dadte" id="numericInput"  placeholder="12" maxlength="2">
+                        <p id="text_dadte">/</p>
+                        <input type="text" class="input_dadte" id="numericInput1" placeholder="24" maxlength="2">
+                </form>
+            </label>
+            </div>
+            
+            <div class="name_card">
+                <label for="name">
+                <form id="card_name_people" action="">
+                        <p id="card_name_people_text">Имя держателя карты</p>
+                        <input type="text" id="numericInput3" placeholder="Serg Suvorov">
+                </form>
+                </label>
+            </div>
+
+            <div class="card_back_all">
+                <div style="opacity:0 ;">.</div>
+                <div id="poloska"></div>
+                <div>
+                    <label for="cvc">
+                    <p id="cvc_kod">CVC-код</p>
+                    <form action="">
+                            <input type="password" id="numericInput2" placeholder="999" maxlength="3">
+                    </form>
+                </label>
+                </div>
+            </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
