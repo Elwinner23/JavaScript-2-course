@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>authorization</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <div>
+            <div class="flex justify-center py-5">
+                <div class="px-3 py-3 space-y-2 rounded-xl">
+                    <h1 class="text-xl font-bold">Вход в систему</h1>
+                    <div>
+                        <div class="flex flex-col gap-3">
+                            <input id="login" class="h-inputh w-inputw border border-black rounded-md indent-2 hover:border-green-600 transition-all ease-linear outline-green-600" placeholder="Логин" type="text">
+                            <div class="flex justify-end items-center">
+                                <input id="password" class="h-inputh w-inputw border border-black rounded-md indent-2 relative hover:border-green-600 transition-all ease-linear outline-green-600 " placeholder="Пароль" type="password">
+                                <button id="checkpassword" onclick="checkpassword()" class="absolute inline-block bg-[url(https://snipp.ru/demo/495/view.svg)] h-[20px] w-[20px] mr-2"></button>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-1 my-2">
+                            <input id="check" type="checkbox">
+                            <label for="check">Запонить пароль</label>
+                        </div>
+                        <div class="flex justify-center my-1">
+                            <button onclick="login()" class="bg-green-500 px-1 py-1 text-white rounded-md w-inputw font-bold hover:bg-green-800 transition-all ease-out">Войти</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<script src="js/script.js"></script>
+</body>
+</html>
