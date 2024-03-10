@@ -1,5 +1,5 @@
-const { detectCardType, validateCVVORCVCCode, validateExpirationDate, validateCreditCardNumber } = require('card-validator-utils');
-//import { detectCardType, validateCVVORCVCCode, validateExpirationDate, validateCreditCardNumber } from "C:\Users\Daria\OneDrive\Рабочий стол\kod\JavaScript-2-course\Lesson26\node_modules\card-validator-utils";
+//const { detectCardType, validateCVVORCVCCode, validateExpirationDate, validateCreditCardNumber } = require('card-validator-utils');
+import { detectCardType, validateCVVORCVCCode, validateExpirationDate, validateCreditCardNumber } from "C:\Users\Daria\OneDrive\Рабочий стол\kod\JavaScript-2-course\Lesson26\node_modules\card-validator-utils";
 
 let card_number = document.getElementById('card-number');
 let card_date = document.getElementById('card-date');
@@ -15,11 +15,8 @@ function proverka(){
     card_name.value.length >= 5){
         button.style.cssText = 'background-color: #2c79ff;';
         button.addEventListener('click', () => {
-            card_number.value = '';
-            card_date.value = '';
-            card_cvc.value = '';
-            card_name.value = '';
             button.style.cssText = 'background-color: #bad3fe;';
+            console.log('right')
             document.getElementById('foto').style.backgroundImage = 'none';
         })
     }else{
@@ -28,42 +25,4 @@ function proverka(){
     };
 };
 
-
-card_number.addEventListener('input', function (e) { 
-    const inputText = e.target.value.replaceAll(' ', '').replace(/\D/g, ''); 
-    const formattedText = inputText.replace(/(.{4})/g, '$1 '); 
-    e.target.value = formattedText.trim(); 
-    let cardType = detectCardType(inputText);
-    if (inputText.length >= 14){
-        if (cardType == 'visa'){
-            document.getElementById('foto').style.backgroundImage = `url('${image.visa}')`;
-        }else if(cardType == 'mastercard'){
-            document.getElementById('foto').style.backgroundImage = `url('${image.mastercard}')`;
-        }else if(cardType == 'discover'){
-            document.getElementById('foto').style.backgroundImage = `url('${image.discover}')`; 
-        }else if(cardType == 'american express'){
-            document.getElementById('foto').style.backgroundImage = `url('${image.amer_ex}')`; 
-        };
-        
-    }else{
-        document.getElementById('foto').style.backgroundImage = 'none';
-    };
-    proverka();
-});
-card_date.addEventListener('input', function (e) { 
-    const inputText = e.target.value.replaceAll(' ', '').replace(/\D/g, ''); 
-    const formattedText = inputText.replace(/(.{2})/g, '$1/'); 
-    e.target.value = formattedText.slice(-1) == '/'? formattedText.replace(/\/$/, ''): formattedText.trim(); 
-    proverka();
-});
-card_cvc.addEventListener('input', function (e) { 
-    const inputText = e.target.value.replaceAll(' ', '').replace(/\D/g, ''); 
-    e.target.value = inputText.trim(); 
-    proverka();
-});
-card_name.addEventListener('input', function (e) { 
-    const inputText = e.target.value.replaceAll(' ', '').replace(/\d/g,''); 
-    e.target.value = inputText.trim(); 
-    proverka();
-    
-});
+proverka()

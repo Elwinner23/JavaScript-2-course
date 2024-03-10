@@ -114,3 +114,17 @@ input{
     border-radius: 5px;
     border-color: rgb(50, 40, 147);;
 }
+
+#oplat{
+    width: 530px;
+    height: 50px;
+    margin-top: 50px;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: rgb(157, 148, 239);
+}
+
+#oplat:hover{
+    background-color: rgb(136, 125, 239);
+    cursor: pointer;
+}
