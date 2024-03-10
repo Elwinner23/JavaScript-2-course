@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+}
+  
+button {
+    margin-top: 20px;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: rgb(81, 111, 212);
+    color: white;
+}
+  
+#statusDisplay {
+    margin-top: 20px;
+    font-size: 24px;
+}
