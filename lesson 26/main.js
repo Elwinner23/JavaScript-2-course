@@ -91,7 +91,7 @@ email.addEventListener('input', function (e) {
 const button = document.querySelector("button");
 
 function checkConditions() {
-  if (inputCarta.value.length === 19 && inputsrok.value.length === 3 && email.style.border === "green") {
+  if (inputCarta.value.length >= 16 && inputsrok.value.length === 3 && email.style.border === "green") {
     button.style.color = "white";
   } else {
     button.style.backgroundColor = ""; 
