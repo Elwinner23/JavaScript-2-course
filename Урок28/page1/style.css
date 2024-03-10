@@ -1,0 +1,104 @@
+
+#content__container{
+    width: 400px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 512px;
+    margin-top: 200px;
+    padding-left: 30px;
+    background-color: greenyellow;
+    border: 2px solid green;
+    border-radius: 20px;
+}
+
+h1{
+    font-family: sans-serif;
+    color: green;
+}
+
+#inputs__container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+}
+
+#login__input{
+    width: 75%;
+    height: 30px;
+    background-color: aquamarine;
+    color: green;
+    border: 1px solid green;
+    border-radius: 5px;
+}
+
+#login__input::placeholder{
+    color: green;
+    padding-left: 15px;
+}
+
+#password__input{
+    width: 75%;
+    height: 30px;
+    background-color: aquamarine;
+    color: green;
+    border: 1px solid green;
+    border-radius: 5px;
+}
+
+#password__input::placeholder{
+    color: green;
+    padding-left: 15px;
+}
+
+#remember-user__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+
+#square{
+    width: 15px;
+    height: 15px;
+    border: 2px solid green;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#remember-user__text{
+    color: green;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+#to-login__button{
+    padding: 10px;
+    border: 1px solid orangered;
+    background-color: orange;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#to-login__button:hover{
+    background-color: orangered;
+    color: orange;
+}
+
+.gal{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: green;
+}
