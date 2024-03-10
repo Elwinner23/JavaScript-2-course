@@ -1,5 +1,12 @@
-import { cardValidator } from './index.js';
+// import { cardValidator } from './node_modules/cardvalidator-ks/lib/index.js';
 
+// import{ detectCardType, validateCVVORCVCCode, validateExpirationDate, validateCreditCardNumber } from "./node_modules/card-validator-utils/index.js";
+
+import { isExpirationDateValid, isSecurityCodeValid, getCreditCardNameByNumber } from 'creditcard.js';
+isValid('4916108926268679'); // returns true
+isExpirationDateValid('02', '2020'); // returns true
+isSecurityCodeValid('4556603578296676', '250'); // returns true
+getCreditCardNameByNumber('4539578763621486'); // returns 'Visa'
 
 let inputCarta = document.getElementById("nomer");
 
@@ -24,12 +31,12 @@ inputCarta.addEventListener('input', function(e) {
     console.log(cardInfo.brandLogo);
     document.querySelector(".imagee").style.backgroundImage = `url(${cardInfo.brandLogo})`;
   }
-  let cardValid = cardValidator(formattedText);
-    if (cardValid) {
-      console.log('Валидна');
-    } else {
-      console.log('Не валидна');
-    }
+  // let cardValid = cardValidator(formattedText);
+  //   if (cardValid) {
+  //     console.log('Валидна');
+  //   } else {
+  //     console.log('Не валидна');
+  //   }
   
 });
 
