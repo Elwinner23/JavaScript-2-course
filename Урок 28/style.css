@@ -1,0 +1,41 @@
+body{
+    display: inline;
+}
+
+.form{
+    margin-left: 40%;
+}
+
+input{
+    font-size: 20px;
+    margin:2% 0%;
+    padding: 1%;
+    border-radius:10px;
+}
+
+#loginButton{
+    background-color: rgb(0, 182, 121);
+    font-size: 20px;
+    color: white;
+    border: none;
+    padding:1% 13%;
+    border-radius: 10px;
+}
+
+.good{
+    color: green;
+    text-align: center;
+}
+
+img{
+    width: 500px;
+    margin-left: 32%;
+}
+#exit{
+    background-color:beige;
+    font-size: 20px;
+    color: rgba(53, 51, 51, 0.749);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+}
