@@ -6,6 +6,7 @@
     "cardvalidator-ks": "^1.0.1",
     "creditcard.js": "^3.0.33",
     "creditcards": "^4.2.0",
+    "parcel": "^2.12.0",
     "parsel": "^0.3.0"
   },
   "scripts": {
