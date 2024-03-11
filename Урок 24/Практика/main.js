@@ -1,18 +1,18 @@
 /**
  * Функция для получения списка пород кошек с использованием API "Cat Fact Ninja"
  */
-async function getCatBreeds() {
+const breedsList = document.getElementById("breedsList");
+async function getCatBreeds(count) {
     // Отправляем запрос на сервер для получения данных о породах кошек
-    const response = await fetch('https://catfact.ninja/breeds?limit=10');
+    const response = await fetch(`https://catfact.ninja/breeds?limit=${count}`);
 
     // Разбираем ответ сервера в формате JSON
     const data = await response.json();
     // Получаем массив объектов с данными о породах кошек
     const breedsData = data.data;
-console.log(breedsData)
+    console.log(breedsData)
     // Находим элемент, в который будем добавлять список пород кошек
-    const breedsList = document.getElementById("breedsList");
-
+    breedsList.replaceChildren('');
     // Проходимся по каждой породе кошек и создаем соответствующий элемент списка
     breedsData.forEach(breed => {
         // Создаем новый элемент li для текущей породы кошки
@@ -54,13 +54,36 @@ console.log(breedsData)
         breedsList.appendChild(newLi);
     });
 }
-
+const label = document.querySelector('.error');
+let button = document.querySelector('button');
+let input = document.querySelector('input');
+button.addEventListener('click', (event)=>{
+    let count = input.value;
+    console.log(count);
+    if (count != '' && count != 0)
+    {
+        getCatBreeds(count)
+        .catch(error => {
+            // В случае ошибки выводим сообщение об ошибке в консоль
+            console.error('Произошла ошибка:', error);
+        });
+        label.innerHTML = '';
+        input.style = "border: 1px solid black; margin-top: 40px";
+    }
+    else if (count == '')
+    {
+        label.innerHTML = 'Enter the number';
+        input.style = "border: 3px solid crimson; margin-top: 5px";
+    }
+    else
+    {
+        label.innerHTML = '';
+        input.style = "border: 1px solid black; margin-top: 40px";
+        breedsList.replaceChildren('');
+    }
+});
 // Вызываем функцию для получения списка пород кошек
-getCatBreeds()
-    .catch(error => {
-        // В случае ошибки выводим сообщение об ошибке в консоль
-        console.error('Произошла ошибка:', error);
-    });
+
 
 /**
  * Функция для получения фактов о котах

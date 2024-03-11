@@ -12,6 +12,32 @@ html {
     box-sizing: inherit;
 }
 
+.value{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+}
+
+button{
+    height: 40px;
+    width: 200px;
+    border-radius: 16px;
+    margin: 5px;
+}
+
+input{
+    width: 200px;
+    height: 40px;
+    border-radius: 16px;
+    margin: 5px;
+    margin-top: 40px;
+}
+
+label{
+    margin: 5px;
+    font-size: 30px;
+}
+
 h1,
 h2,
 h3,
