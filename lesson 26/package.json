@@ -1,13 +1,11 @@
 {
   "dependencies": {
-    "card-info": "^1.2.4",
     "card-validator": "^9.1.0",
     "card-validator-utils": "^1.0.6",
     "cardvalidator-ks": "^1.0.1",
     "creditcard.js": "^3.0.33",
     "creditcards": "^4.2.0",
-    "parcel": "^2.12.0",
-    "parsel": "^0.3.0"
+    "parcel": "^2.12.0"
   },
   "scripts": {
     "dev": "parcel index.html"
