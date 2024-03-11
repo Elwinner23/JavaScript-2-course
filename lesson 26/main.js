@@ -2,11 +2,11 @@
 
 // import{ detectCardType, validateCVVORCVCCode, validateExpirationDate, validateCreditCardNumber } from "./node_modules/card-validator-utils/index.js";
 
-import { isExpirationDateValid, isSecurityCodeValid, getCreditCardNameByNumber, isValid} from 'creditcard.js';
-isValid('4916108926268679'); // returns true
-isExpirationDateValid('02', '2020'); // returns true
-isSecurityCodeValid('4556603578296676', '250'); // returns true
-getCreditCardNameByNumber('4539578763621486'); // returns 'Visa'
+// import { isExpirationDateValid, isSecurityCodeValid, getCreditCardNameByNumber, isValid} from 'creditcard.js';
+// isValid('4916108926268679'); // returns true
+// isExpirationDateValid('02', '2020'); // returns true
+// isSecurityCodeValid('4556603578296676', '250'); // returns true
+// getCreditCardNameByNumber('4539578763621486'); // returns 'Visa'
 
 let inputCarta = document.getElementById("nomer");
 

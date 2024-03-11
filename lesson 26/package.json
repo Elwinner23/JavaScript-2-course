@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "card-info": "^1.2.4",
     "card-validator": "^9.1.0",
     "card-validator-utils": "^1.0.6",
     "cardvalidator-ks": "^1.0.1",
