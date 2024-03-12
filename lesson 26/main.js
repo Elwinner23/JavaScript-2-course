@@ -1,4 +1,4 @@
-// import { cardValidator } from './node_modules/cardvalidator-ks/lib/index.js';
+import { cardValidator } from './index.js';
 
 // import{ detectCardType, validateCVVORCVCCode, validateExpirationDate, validateCreditCardNumber } from "./node_modules/card-validator-utils/index.js";
 
@@ -31,12 +31,12 @@ inputCarta.addEventListener('input', function(e) {
     console.log(cardInfo.brandLogo);
     document.querySelector(".imagee").style.backgroundImage = `url(${cardInfo.brandLogo})`;
   }
-  // let cardValid = cardValidator(formattedText);
-  //   if (cardValid) {
-  //     console.log('Валидна');
-  //   } else {
-  //     console.log('Не валидна');
-  //   }
+  let cardValid = cardValidator(formattedText);
+    if (cardValid) {
+      console.log('Валидна');
+    } else {
+      console.log('Не валидна');
+    }
   
 });
 
@@ -82,7 +82,7 @@ function isEmailValid(value) {
 const email = document.getElementById('email');
 email.addEventListener('input', function (e) {
   if (isEmailValid(email.value)) {
-    email.style.border = '2px solid green';
+    email.style.border = 'none';
   } else {
     email.style.border = '2px solid red';
   }
@@ -91,8 +91,9 @@ email.addEventListener('input', function (e) {
 const button = document.querySelector("button");
 
 function checkConditions() {
-  if (inputCarta.value.length >= 16 && inputsrok.value.length === 3 && email.style.border === "green") {
-    button.style.color = "white";
+  if (inputCarta.value.length >= 15 && inputsrok.value.length >= 4 && inputKod.value.length === 3 && email.style.border === "none") {
+    button.style.color = "black";
+    button.style.backgroundColor = "yellow"; 
   } else {
     button.style.backgroundColor = ""; 
   }}
