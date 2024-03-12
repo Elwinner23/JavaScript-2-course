@@ -1,5 +1,5 @@
 //const { detectCardType, validateCVVORCVCCode, validateExpirationDate, validateCreditCardNumber } = require('card-validator-utils');
-import { detectCardType, validateCVVORCVCCode, validateExpirationDate, validateCreditCardNumber } from "C:\Users\Daria\OneDrive\Рабочий стол\kod\JavaScript-2-course\Lesson26\node_modules\card-validator-utils";
+import { detectCardType, validateCVVORCVCCode, validateExpirationDate, validateCreditCardNumber } from "card-validator-utils";
 
 let card_number = document.getElementById('card-number');
 let card_date = document.getElementById('card-date');
@@ -14,15 +14,33 @@ function proverka(){
     validateCVVORCVCCode(card_cvc.value) &&
     card_name.value.length >= 5){
         button.style.cssText = 'background-color: #2c79ff;';
-        button.addEventListener('click', () => {
-            button.style.cssText = 'background-color: #bad3fe;';
-            console.log('right')
-            document.getElementById('foto').style.backgroundImage = 'none';
-        })
+        button.disabled = false;
     }else{
-        document.getElementById('oplat').style.cssText = 'background-color: #bad3fe;';
-        button.addEventListener('click', () => {})
+        button.style.cssText = 'background-color: #bad3fe;';
+        button.disabled = true;
     };
 };
 
-proverka()
+
+
+card_number.addEventListener('input', function (e) { 
+    const inputText = e.target.value.replaceAll(' ', '').replace(/\D/g, ''); 
+    const formattedText = inputText.replace(/(.{4})/g, '$1 '); 
+    e.target.value = formattedText.trim(); 
+    let cardType = detectCardType(inputText);
+    if (inputText.length >= 14){
+        if (cardType == 'visa'){
+            console.log("visa");
+        }else if(cardType == 'mastercard'){
+            console.log("mc");
+        }else if(cardType == 'discover'){
+            console.log("disc");
+        }else if(cardType == 'american express'){
+            console.log("AE"); 
+        };
+        
+    }else{
+        document.getElementById('foto').style.backgroundImage = 'none';
+    };
+    proverka();
+});
