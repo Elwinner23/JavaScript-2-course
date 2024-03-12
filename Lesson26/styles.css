@@ -1,0 +1,45 @@
+*{
+    /* border: 2px solid red; */
+    margin: 0px;
+}
+
+.card {
+    height: 250px; 
+    width: 397px; 
+    background-color: #D1FBFF;
+    border-radius: 20px;
+
+    padding: 10px;
+    border: 2px solid #294369;   
+}
+
+h1{
+    color: #294369;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.card div{
+    margin-bottom: 10px;
+}
+
+.card div p{
+    color: #4E4E4E;
+    font-size: 14px;
+    width: 50%;
+}
+
+.card div input{
+    /* border-radius: 4px; */
+    padding: 5px;
+    height: 20px;
+    font-size: 15px;
+}
+
+#time{
+    width: 40px;
+}
+
+#cvv{
+    width: 26px;
+}

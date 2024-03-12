@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Карта</title>
+</head>
+<body>
+    <div style="display: flex;justify-content: center;">
+    <div class="card">
+        <h1>Введите данные для оплаты</h1>
+        <div>
+            <p>НОМЕР КАРТЫ</p>
+            <input type="text" placeholder="0000 0000 0000 0000">
+        </div>
+        <div>
+            <p>СРОК ДЕЙСТВИЯ</p>
+            <input type="text" placeholder="00/00" id="time">
+        </div>
+        <div>
+            <p>CVV/CVV2</p>
+            <input type="text" placeholder="000" id="cvv">
+            <p id="cvv_bootom">ПОСЛЕДНИЕ 3 ЦИФРЫ С ОБРАТНОЙ СТОРОНЫ КАРТЫ</p>
+        </div>
+    </div>
+</div>
+<div style="display: flex;justify-content: center; margin-top: 20px;">
+    <button>Оплатить</button>
+</div>
+    <script src="main.js"></script>
+</body>
+</html>
