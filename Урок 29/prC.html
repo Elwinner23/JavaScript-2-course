@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+        import { el, mount } from 'https://redom.js.org/redom.es.min.js';
+
+        const card = el('.cont',
+        el('.card',
+            el('form',
+                el('.block',
+                    el('label.card-label', 'Номер карты'),
+                    el('input.card-input.input-number', { type: 'text', placeholder: 'XXXX XXXX XXXX XXXX', maxlength: '19' })
+                ),
+                el('.block2',
+                    el('.card-block',
+                        el('label.card-label', 'Срок действия'),
+                        el('input.card-input.input-date', { type: 'text', placeholder: 'ММ/ГГ', maxlength: '5' })
+                    ),
+                    el('.card-block',
+                        el('label.card-label', 'Проверочный код'),
+                        el('input.card-input.input-code', { type: 'text', placeholder: 'CVC/CVV', maxlength: '3' })
+                    )
+                ),
+                el('.card-block',
+                    el('label.card-label', 'Email для отправки чека'),
+                    el('input.card-input.input-email', { type: 'email', placeholder: 'qqq@qq.qq' })
+                )
+            ),
+            el('.card-img#img')
+        ),
+        el('button.btn', 'Оплатить')
+    );
+    mount(document.body, card);
+    </script>
+</body>
+</html>
