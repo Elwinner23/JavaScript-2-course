@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+}
+
+.filter{
+    width: 65%;
+    margin: 2%;
+}
+
+h3{
+    text-align: center;
+}
+
+.for{
+    margin-right: 6%;
+    margin-top: 2%;
+}
+
+input{
+    margin-top: 5%;
+    border: rgb(158, 158, 158) solid 1px;
+    padding: 5%;
+    padding-right: 18%;
+    border-radius: 5px;
+}
+
+.forms{
+    display: flex;
+}
+
+table{
+    margin-top: 2%;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td{
+    border: 1px solid grey;
+    padding: 1%;
+}
+
+td:first-child{
+    width: 27%;
+}
+
+td:nth-child(5){
+    width: 8%;
+    text-align: center;
+}
+
+th{
+    background-color: #5B5B5B;
+    color: white;
+}
+
+td{
+    background-color: #444444;
+    color: white;
+}
