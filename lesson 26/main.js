@@ -1,12 +1,12 @@
-import { cardValidator } from './index.js';
+// import { cardValidator } from './index.js';
 
 // import{ detectCardType, validateCVVORCVCCode, validateExpirationDate, validateCreditCardNumber } from "./node_modules/card-validator-utils/index.js";
 
-// import { isExpirationDateValid, isSecurityCodeValid, getCreditCardNameByNumber, isValid} from 'creditcard.js';
-// isValid('4916108926268679'); // returns true
-// isExpirationDateValid('02', '2020'); // returns true
-// isSecurityCodeValid('4556603578296676', '250'); // returns true
-// getCreditCardNameByNumber('4539578763621486'); // returns 'Visa'
+import { isExpirationDateValid, isSecurityCodeValid, getCreditCardNameByNumber, isValid} from 'creditcard.js';
+isValid('4916108926268679'); // returns true
+isExpirationDateValid('02', '2020'); // returns true
+isSecurityCodeValid('4556603578296676', '250'); // returns true
+getCreditCardNameByNumber('4539578763621486'); // returns 'Visa'
 
 let inputCarta = document.getElementById("nomer");
 
@@ -31,12 +31,12 @@ inputCarta.addEventListener('input', function(e) {
     console.log(cardInfo.brandLogo);
     document.querySelector(".imagee").style.backgroundImage = `url(${cardInfo.brandLogo})`;
   }
-  let cardValid = cardValidator(formattedText);
-    if (cardValid) {
-      console.log('Валидна');
-    } else {
-      console.log('Не валидна');
-    }
+  // let cardValid = cardValidator(formattedText);
+  //   if (cardValid) {
+  //     console.log('Валидна');
+  //   } else {
+  //     console.log('Не валидна');
+  //   }
   
 });
 
@@ -104,31 +104,31 @@ inputCarta.addEventListener("input", checkConditions);
 
 // import { isValid,isExpirationDateValid,isSecurityCodeValid,getCreditCardNameByNumber } from './node_modules/creditcard.js/dist/creditcard.js';
 
-// inputsrok.addEventListener("input", function() {
-//   const inputValue = inputsrok.value;
-//   const [month, year] = inputValue.split("/");
+inputsrok.addEventListener("input", function() {
+  const inputValue = inputsrok.value;
+  const [month, year] = inputValue.split("/");
   
-//   const numericMonth = Number(month);
-//   const numericYear = Number(year);
+  const numericMonth = Number(month);
+  const numericYear = Number(year);
 
-//   const isValid = isExpirationDateValid(numericMonth, numericYear);
+  const isValid = isExpirationDateValid(numericMonth, numericYear);
   
  
-//   console.log("Месяц:", numericMonth);
-//   console.log("Год:", numericYear);
-//   console.log("Дата валидна", isValid);
-// });
+  console.log("Месяц:", numericMonth);
+  console.log("Год:", numericYear);
+  console.log("Дата валидна", isValid);
+});
 
-// inputCarta .addEventListener("input", function() {
-//   const number = inputCarta.value;
-//   const isValid = isValidCardNumber(number);
-//   let cardName = "";
-//   if (isValid) {
-//     cardName = getCreditCardNameByNumber(number);
-//   }
+inputCarta .addEventListener("input", function() {
+  const number = inputCarta.value;
+  const isValid = isValidCardNumber(number);
+  let cardName = "";
+  if (isValid) {
+    cardName = getCreditCardNameByNumber(number);
+  }
 
-//   //
-//   console.log("Номер карты:", number);
-//   console.log("Валиден", isValid);
-//   console.log("Имя карты:", cardName);
-// });
+  //
+  console.log("Номер карты:", number);
+  console.log("Валиден", isValid);
+  console.log("Имя карты:", cardName);
+});

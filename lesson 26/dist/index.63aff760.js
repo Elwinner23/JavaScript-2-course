@@ -584,7 +584,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"adjPd":[function(require,module,exports) {
-// import { cardValidator } from './node_modules/cardvalidator-ks/lib/index.js';
+// import { cardValidator } from './index.js';
 // import{ detectCardType, validateCVVORCVCCode, validateExpirationDate, validateCreditCardNumber } from "./node_modules/card-validator-utils/index.js";
 var _creditcardJs = require("creditcard.js");
 (0, _creditcardJs.isValid)("4916108926268679"); // returns true
@@ -636,40 +636,41 @@ function isEmailValid(value) {
 }
 const email = document.getElementById("email");
 email.addEventListener("input", function(e) {
-    if (isEmailValid(email.value)) email.style.border = "2px solid green";
+    if (isEmailValid(email.value)) email.style.border = "none";
     else email.style.border = "2px solid red";
 });
 const button = document.querySelector("button");
 function checkConditions() {
-    if (inputCarta.value.length >= 16 && inputsrok.value.length === 3 && email.style.border === "green") button.style.color = "white";
-    else button.style.backgroundColor = "";
+    if (inputCarta.value.length >= 15 && inputsrok.value.length >= 4 && inputKod.value.length === 3 && email.style.border === "none") {
+        button.style.color = "black";
+        button.style.backgroundColor = "yellow";
+    } else button.style.backgroundColor = "";
 }
 email.addEventListener("input", checkConditions);
 inputKod.addEventListener("input", checkConditions);
 inputsrok.addEventListener("input", checkConditions);
-inputCarta.addEventListener("input", checkConditions); // import { isValid,isExpirationDateValid,isSecurityCodeValid,getCreditCardNameByNumber } from './node_modules/creditcard.js/dist/creditcard.js';
- // inputsrok.addEventListener("input", function() {
- //   const inputValue = inputsrok.value;
- //   const [month, year] = inputValue.split("/");
- //   const numericMonth = Number(month);
- //   const numericYear = Number(year);
- //   const isValid = isExpirationDateValid(numericMonth, numericYear);
- //   console.log("Месяц:", numericMonth);
- //   console.log("Год:", numericYear);
- //   console.log("Дата валидна", isValid);
- // });
- // inputCarta .addEventListener("input", function() {
- //   const number = inputCarta.value;
- //   const isValid = isValidCardNumber(number);
- //   let cardName = "";
- //   if (isValid) {
- //     cardName = getCreditCardNameByNumber(number);
- //   }
- //   //
- //   console.log("Номер карты:", number);
- //   console.log("Валиден", isValid);
- //   console.log("Имя карты:", cardName);
- // });
+inputCarta.addEventListener("input", checkConditions);
+// import { isValid,isExpirationDateValid,isSecurityCodeValid,getCreditCardNameByNumber } from './node_modules/creditcard.js/dist/creditcard.js';
+inputsrok.addEventListener("input", function() {
+    const inputValue = inputsrok.value;
+    const [month, year] = inputValue.split("/");
+    const numericMonth = Number(month);
+    const numericYear = Number(year);
+    const isValid = (0, _creditcardJs.isExpirationDateValid)(numericMonth, numericYear);
+    console.log("\u041C\u0435\u0441\u044F\u0446:", numericMonth);
+    console.log("\u0413\u043E\u0434:", numericYear);
+    console.log("\u0414\u0430\u0442\u0430 \u0432\u0430\u043B\u0438\u0434\u043D\u0430", isValid);
+});
+inputCarta.addEventListener("input", function() {
+    const number = inputCarta.value;
+    const isValid = isValidCardNumber(number);
+    let cardName = "";
+    if (isValid) cardName = (0, _creditcardJs.getCreditCardNameByNumber)(number);
+    //
+    console.log("\u041D\u043E\u043C\u0435\u0440 \u043A\u0430\u0440\u0442\u044B:", number);
+    console.log("\u0412\u0430\u043B\u0438\u0434\u0435\u043D", isValid);
+    console.log("\u0418\u043C\u044F \u043A\u0430\u0440\u0442\u044B:", cardName);
+});
 
 },{"creditcard.js":"lyHGp"}],"lyHGp":[function(require,module,exports) {
 /**
