@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.card{
+    width: 30%;
+    height: 30%;
+    border: 1px solid rgb(93, 93, 238);
+    border-radius: 20px;
+    position: absolute;
+    background-color: aliceblue;
+    margin: 15px;
+}
+
+.back{
+    margin-left: 200px;
+    margin-top: 1.5%;
+    display: flex;
+    align-items: end;
+    flex-direction: column
+}
+.back *{
+    width: 20%;
+}
+
+.front{
+    display: flex;
+    flex-direction: column;
+}
+
+.front .date{
+    display: flex;
+    margin-left: 15%;
+}
+
+.front .date input{
+    width: 20%;
+    margin: 0 25px;
+    text-align: center;
+}
+
+.main{
+    display: flex;
+}
+input{
+    width: 88%;
+    height: 40px;
+    font-size: 24px;
+    margin: 5px 0;
+    padding-left: 5px;
+    border: 1px solid rgb(93, 93, 238);
+}
+p{
+    font-size: 28px;
+    color: #555555;
+}
+h2{
+    font-size: 32px;
+    color: rgb(93, 93, 238);
+    margin: 15px 15px 0;
+}
+div{
+    margin: 15px 15px;
+}
+
+.descr{
+    font-size: 22px;
+}
+
+.magnit{
+    width: 100%;
+    height: 75px;
+    margin: 20px 0 0;
+    background-color: #333333;
+}
+.cvv input{
+    width: 80%;
+    text-align: center;
+}
+.cvv *{
+    width: 100%;
+}
