@@ -5,61 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Студенты</h1>
-    <div class="filter">
-        <h3>Фильтер</h3>
-        <div class="forms">
-            <div class="for">
-                <p>ФИО</p>
-                <input type="text" placeholder="ФИО">
+    <div class="filad">
+        <div class="filter">
+            <h3>Фильтер</h3>
+            <div class="forms">
+                <div class="for">
+                    <p>ФИО</p>
+                    <input class="r" type="text" placeholder="ФИО">
+                </div>
+                <div class="for">
+                    <p>Факультет</p>
+                    <input class="r" type="text" placeholder="Факультет">
+                </div>
+                <div class="for">
+                    <p>Год начала обучения</p>
+                    <input class="r" type="text" placeholder="Год начала обучения">
+                </div>
+                <div class="for">
+                    <p>Год окончания обучения</p>
+                    <input class="r" type="text" placeholder="Год окончания обучения">
+                </div>
             </div>
-            <div class="for">
-                <p>Факультет</p>
-                <input type="text" placeholder="Факультет">
-            </div>
-            <div class="for">
-                <p>Год начала обучения</p>
-                <input type="text" placeholder="Год начала обучения">
-            </div>
-            <div class="for">
-                <p>Год окончания обучения</p>
-                <input type="text" placeholder="Год окончания обучения">
+            <div class="tabl">
+                <table>
+                    <tr>
+                        <th>ФИО</th>
+                        <th>Направление</th>
+                        <th>День рождения</th>
+                        <th>Годы обучения</th>
+                        <th>Удалить</th>
+                    </tr>
+                    <tr>
+                        <td>Иванов Иван Иванович</td>
+                        <td>Frontend</td>
+                        <td>01.01.2001</td>
+                        <td>2020-2024 (4 курс)</td>
+                        <td>X</td>
+                    </tr>
+                    <tr>
+                        <td>Ольгина Ольга Олеговна</td>
+                        <td>Backend</td>
+                        <td>01.01.2001</td>
+                        <td>2019-2023 (закончил)</td>
+                        <td>X</td>
+                    </tr>
+                    <tr>
+                        <td>Васечкин Василий Васильевич</td>
+                        <td>Design</td>
+                        <td>01.01.2001</td>
+                        <td>2022-2026 (2 курс)</td>
+                        <td>X</td>
+                    </tr>
+                </table>
             </div>
         </div>
-        <div class="tabl">
-            <table>
-                <tr>
-                    <th>ФИО</th>
-                    <th>Направление</th>
-                    <th>День рождения</th>
-                    <th>Годы обучения</th>
-                    <th>Удалить</th>
-                </tr>
-                <tr>
-                    <td>Иванов Иван Иванович</td>
-                    <td>Frontend</td>
-                    <td>01.01.2001</td>
-                    <td>2020-2024 (4 курс)</td>
-                    <td>X</td>
-                </tr>
-                <tr>
-                    <td>Ольгина Ольга Олеговна</td>
-                    <td>Backend</td>
-                    <td>01.01.2001</td>
-                    <td>2019-2023 (закончил)</td>
-                    <td>X</td>
-                </tr>
-                <tr>
-                    <td>Васечкин Василий Васильевич</td>
-                    <td>Design</td>
-                    <td>01.01.2001</td>
-                    <td>2022-2026 (2 курс)</td>
-                    <td>X</td>
-                </tr>
-            </table>
+        <div class="ad">
+            <h1>Добавить</h1>
+            <div class="inp">
+                <div class="fo">
+                    <p>Фамилия</p>
+                    <input class="f" type="text" placeholder="Фамилия">
+                </div>
+                <div class="fo">
+                    <p>Имя</p>
+                    <input class="f" type="text" placeholder="Имя">
+                </div>
+                <div class="fo">
+                    <p>Отчество</p>
+                    <input class="f" type="text" placeholder="Отчество">
+                </div>
+                <div class="fo">
+                    <p>Дата Рождения</p>
+                    <input class="f" type="text" placeholder="Дата Рождения">
+                </div>
+                <div class="fo">
+                    <p>Год начала обучения</p>
+                    <input class="f" type="text" placeholder="Год начала обучения">
+                </div>
+                <div class="fo">
+                    <p>Факультет</p>
+                    <input class="f" type="text" placeholder="Факультет">
+                </div>
+                <button>Добавить студента</button>
+            </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

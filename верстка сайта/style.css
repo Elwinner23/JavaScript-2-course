@@ -3,13 +3,21 @@
     padding: 0;
 }
 
+h1,h3,p{
+    font-family: "Inter", sans-serif;
+}
+
+.filad{
+    display: flex;
+}
+
 h1{
     text-align: center;
 }
 
 .filter{
-    width: 65%;
-    margin: 2%;
+    width: 70%;
+    margin: 2% 0% 2% 1%;
 }
 
 h3{
@@ -21,11 +29,11 @@ h3{
     margin-top: 2%;
 }
 
-input{
-    margin-top: 5%;
-    border: rgb(158, 158, 158) solid 1px;
+.r{
+    margin-top: 2%;
+    border: rgb(211, 211, 211) solid 1px;
     padding: 5%;
-    padding-right: 18%;
+    padding-right: 15%;
     border-radius: 5px;
 }
 
@@ -36,7 +44,7 @@ input{
 table{
     margin-top: 2%;
     border-collapse: collapse;
-    width: 100%;
+    width: 95%;
 }
 
 th, td{
@@ -61,4 +69,38 @@ th{
 td{
     background-color: #444444;
     color: white;
+}
+
+.ad{
+    width: 20%;
+    background-color: #C6C6C6;
+    padding: 3% 3% 2% 3%;
+    margin-top: 2%;
+    border-radius: 10px;
+    margin-left: 2%;
+}
+
+.fo{
+    margin-top: 10%;
+}
+
+.inp{
+    margin-top: 20%;
+}
+
+.f{
+    margin-top: 2%;
+    border: rgb(211, 211, 211) solid 1px;
+    padding: 5%;
+    padding-right: 35%;
+    border-radius: 5px;
+}
+
+button{
+    background-color: #5E5BFF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5%;
+    margin-top: 7%;
 }
