@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "credit-cards": "^1.0.1",
     "creditcard.js": "^3.0.33",
     "parcel": "^2.12.0"
   },
