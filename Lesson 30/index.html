@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h1>Студенты</h1>
+        <div class="panel">
+            <div class="filters">
+                <h2>Фильтры</h2>
+                <div class="criteria">
+                    <div class="criteria_input">
+                        <label for="fio">ФИО</label>
+                        <input type="text" placeholder="ФИО" name="fio" id="fio">
+                    </div>
+                    <div class="criteria_input">
+                        <label for="Faculty">Факультет</label>
+                        <input type="text" placeholder="Факультет" name="faculty" id="faculty">
+                    </div>
+                    <div class="criteria_input">
+                        <label for="year_the_beginning_of_training">Год начало обучения</label>
+                        <input type="text" placeholder="Год начало обучения" name="year_the_beginning_of_training" id="year_the_beginning_of_training">
+                    </div>
+                    <div class="criteria_input">
+                        <label for="year_of_graduation">Год окончания обучения</label>
+                        <input type="text" placeholder="Год окончания обучения" name="year_of_graduation" id="year_of_graduation">
+                    </div>
+                </div>
+                <table border="0">
+                    <tr>
+                        <td>ФИО</td>
+                        <td>Направление</td>
+                        <td>Дата рождения</td>
+                        <td>Годы обучения</td>
+                        <td>Удалить</td>    
+                    </tr>
+                    <tr>
+                        <td>Иванов Иван Иванович</td>
+                        <td>Frontend</td>
+                        <td>01.01.2001</td>
+                        <td>2020-2024 (4 курс)</td>
+                        <td>Х</td>    
+                    </tr>
+                    <tr>
+                        <td>Ольгина Ольга Олеговна</td>
+                        <td>Backend</td>
+                        <td>01.01.2001</td>
+                        <td>2019-2023 (закончил)</td>
+                        <td>Х</td>    
+                    </tr>
+                    <tr>
+                        <td>Васечкин Василий Васильевич</td>
+                        <td>Design</td>
+                        <td>01.01.2001</td>
+                        <td>2022-2026 (2 курс)</td>
+                        <td>Х</td>    
+                    </tr>
+                </table>
+            </div>
+            <div class="add">
+                <h2>Добавить</h2>
+                <div class="add_input">
+                    <label for="surname">Фамилия</label>
+                    <input type="text" name="surname" id="surname" placeholder="Фамилия">
+                </div>
+                <div class="add_input">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" placeholder="Имя">
+                </div>
+                <div class="add_input">
+                    <label for="fatherland">Отечество</label>
+                    <input type="text" id="fatherland" name="fatherland" placeholder="Отечество">
+                </div>
+                <div class="add_input">
+                    <label for="date_of_birth">Дата рождения</label>
+                    <input type="text" name="date_of_birth" id="date_of_birth" placeholder="Дата рождения">
+                </div>
+                <div class="add_input">
+                    <label for="year_the_beginning_of_training2">Год начала обучения</label>
+                    <input type="text" name="year_the_beginning_of_training2" id="year_the_beginning_of_training2" placeholder="Год начала обучения">
+                </div>
+                <div class="add_input">
+                    <label for="direction">Направление</label>
+                    <input type="text" name="direction" id="direction" placeholder="Направление">
+                </div>
+                <button id="add">Добавить студента</button>
+            </div>
+        </div>
+        
+    </main>
+</body>
+</html>
