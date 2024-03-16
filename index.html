@@ -2,69 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Messanger</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div>
-            <img src="allPhoto/Back.svg" alt="icon_back">
-                 <div>
-                    <img src="allPhoto/Rectangle 161124222.svg" alt="icon_user">
-                    <div>
-                        <p>Александр</p>
-                        <p>Online</p>
-                    </div>
-                </div>
-            <img src="allPhoto/Option-Vertical.svg" alt="icon_settings">
+  <div class="credit-card">
+  <div class="credit-card-form">
+    <form action="submit">
+      <img src="" alt="" class="card-image">
+      <div class="credit-card-number">
+        <label for="card-number" id="numlab">Номер карты</label>
+        <input type="text" id="card-number" name="card-number" class="credit-input" maxlength="19" placeholder="1111 1111 1111 1111">
+      </div>
+  
+      <div class="credit-card-info">
+        <div class="credit-card-info-item">
+          <label for="expiry-date" id="lab2">Срок действия</label>
+          <input type="text" id="expiry-date" name="expiry-date" maxlength="5" placeholder="ММ/ГГ" pattern="\d{2}/\d{2}">
         </div>
-    </header>
 
-    <main>
-        <section>
-            <article>
-                <p>Привет, как правильно переносить макет из Figma?</p>
-                <div>
-                    <p>13:00</p>
-                    <img src="allPhoto/Tick.svg" alt="icon_chat">
-                </div>
-            </article>
+        <div class="credit-card-info-item">
+          <label for="cvv" id="lab3">CVV:</label>
+          <input type="text" id="cvv" name="cvv" maxlength="3" placeholder="***">
+        </div>
+      </div>
+  
+    <div class="credit-card-email">
+      <label for="Email" id="lab4">Email</label>
+      <input type="email" id="inp4" name="Email" placeholder="serdg.suvorov@mail.ru">
+      <img src="" alt="" class="card-logo">
+    </div>
 
-            <article>
-                <p>Включи режим просмотра для программистов
-                    Изучи каждый элемент
-                    Копируй настройки каждого элемента дизайна в свой код</p>
-                <div>
-                    <p>13:00</p>
-                    <img src="allPhoto/Tick.svg" alt="icon_chat">
-                </div>
-            </article>
+    
+    </form>
+  </div>
+  <button id="button" type="submit" disabled>Купить</button>
+</div>
 
-            <article>
-                <p>У меня точно получится?</p>
-                <div>
-                    <p>13:00</p>
-                    <img src="allPhoto/Tick.svg" alt="icon_chat">
-                </div>
-            </article>
-
-            <article>
-                <p>100%, если что, мы всегда поможем тебе)</p>
-                <div>
-                    <p>13:00</p>
-                    <img src="allPhoto/Tick.svg" alt="icon_chat">
-                </div>
-            </article>
-        </section>
-
-        <footer>
-            <div>
-                <form action=""></form>
-                <button></button>
-            </div>
-        </footer>
-    </main>
+<script src="./node_modules/card-info/dist/card-info.min.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
-

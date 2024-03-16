@@ -1,0 +1,116 @@
+* {
+  border: none;
+  outline: none;
+}
+
+.credit-card-form {
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+    padding: 0 20px 20px 20px;
+    background-image: url(./zemlya-planeta-fantastika.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+  }
+  .credit-card{
+    max-width: 440px;
+    width: 100%;
+    margin: auto;
+    padding: 0 20px 0 20px;
+  }
+  #card-number{
+    max-width: 380px;
+    width: 100%;
+    padding-top: 25px;
+  }
+  #cvv{
+    padding-top: 25px;
+    width: 55px;
+  }
+  #inp4{
+    padding-top: 25px;
+    width: 200px;
+  }
+  #expiry-date{
+    padding-top: 25px;
+    width: 100px;
+  }
+  
+  .credit-card-info{
+    display: flex;
+    max-width: 220px;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  .credit-card-number{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .credit-card-info-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  #numlab, #lab2, #lab3, #lab4{
+    margin-bottom: -20px;
+    position: absolute;
+    color: #9a9c9f;
+    padding-left: 10px;
+    margin-top: 4px;
+  }
+  
+  .credit-card-email{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    border-radius: 14px;
+  }
+  input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    border-radius: 14px;
+  }
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #238e3e;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  input:focus {
+   
+  }
+
+  button[type="submit"]:hover {
+    background: #0b5d3a;
+  }
+  .card-image{
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .card-logo{
+    max-width: 80px;
+    width: 100%;
+  }
+  .card-image{
+    max-width: 370px;
+    height: 50px;
+  }
