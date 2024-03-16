@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "babel-jest": "^29.7.0",
+    "card-info": "^1.2.4",
+    "creditcard": "^0.1.3",
+    "creditcard.js": "^3.0.33",
+    "redom": "^4.0.0",
+    "ts-jest": "^29.1.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
