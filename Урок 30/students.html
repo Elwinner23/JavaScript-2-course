@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="students.css">
+    <title>students</title>
+</head>
+<body>
+    <div class="students">
+        <h1>Студенты</h1>
+    </div>
+    <div class="maintable">
+        <div class="left">
+            <h2>Фильтры</h2>
+            <div class="filters">
+                <div class="filter">
+                    <p class="title">ФИО</p>
+                    <input class="leftinput" type="text" placeholder="ФИО"/>
+                </div>
+                <div class="filter">
+                    <p class="title">Факультет</p>
+                    <input class="leftinput" type="text" placeholder="Факультет"/>
+                </div>
+                <div class="filter">
+                    <p class="title">Год начала обучения</p>
+                    <input class="leftinput" type="text" placeholder="Год начала обучения"/>
+                </div>
+                <div class="filter">
+                    <p class="title">Год окончания обучения</p>
+                    <input class="leftinput" type="text" placeholder="Год окончания обучения"/>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <th>ФИО</th>
+                    <th>Направление</th>
+                    <th>Дата рождения</th>
+                    <th>Годы обучения</th>
+                    <th>Удалить</th>
+                </tr>
+                <tr>
+                    <td>Иванов И.И.</td>
+                    <td>Frontend</td>
+                    <td>12.12.2007</td>
+                    <td>2023-2027 (1 курс)</td>
+                    <td class="last">&#215;</td>
+                </tr>
+                <tr>
+                    <td>Петров П.П.</td>
+                    <td>Frontend</td>
+                    <td>31.08.2005</td>
+                    <td>2022-2026 (2 курс)</td>
+                    <td class="last">&#215;</td>
+                </tr>
+                <tr>
+                    <td>Смирнов С.С.</td>
+                    <td>Frontend</td>
+                    <td>11.03.2002</td>
+                    <td>2020-2024 (закончил)</td>
+                    <td class="last">&#215;</td>
+                </tr>
+            </table>
+        </div>
+        <div class="right">
+            <h1>Добавить</h1>
+            <p class="title">Фамилия</p>
+            <input class="rightinput" type="text" placeholder="Фамилия"/>
+            <p class="title">Имя</p>
+            <input class="rightinput" type="text" placeholder="Имя"/>
+            <p class="title">Отчество</p>
+            <input class="rightinput" type="text" placeholder="Отчество"/>
+            <p class="title">Дата Рождения</p>
+            <input class="rightinput" type="text" placeholder="Дата Рождения"/>
+            <p class="title">Год начала обучения</p>
+            <input class="rightinput" type="text" placeholder="Год начала обучения"/>
+            <p class="title">Направние</p>
+            <input class="rightinput" type="text" placeholder="Направление"/>
+            <button class="dobavit">Добавить студента</button>
+        </div>
+    </div>
+</body>
+</html>
