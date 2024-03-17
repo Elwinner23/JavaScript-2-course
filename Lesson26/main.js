@@ -1,5 +1,9 @@
-// import { detectCardType, validateCVVORCVCCode, validateExpirationDate, validateCreditCardNumber } from "card-validator-utils";
-
+import{
+    isValid,
+    isExpirationDateValid,
+    isSecurityCodeValid,
+    getCreditCardNameByNumber
+} from "creditcard.js"
 
 document.addEventListener('DOMContentLoaded', function() {
     const inputNumber = document.getElementById("num")
@@ -43,10 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const cvv = inputCVV.value;
         console.log(cardNumber);
 
-        return parsel.detectCardType(cardNumber) &&
-            parsel.validateCVVORCVCCode(cardNumber, cvv) &&
-            parsel.validateExpirationDate(expirationDate) &&
-            parsel.validateCreditCardNumber(cardNumber);
+        return isValid(cardNumber) && isExpirationDateValid(expirationDate) && isSecurityCodeValid(cardNumberm, cvv);
     }
 
     button.addEventListener('click', function(event) {
