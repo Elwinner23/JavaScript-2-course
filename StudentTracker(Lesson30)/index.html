@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+    <title>Task Tracker</title>
+</head>
+<body>
+    <h1>Студенты</h1>
+    <div class="content__container">
+        <div>
+            <div class="filters-all__container">
+                <h2 class="filters__title">Фильтры</h2>
+                <article class="filters__container">
+                    <section class="parameters-filter__container">
+                        <h3 class="parametr-filter__title">ФИО</h3>
+                        <input type="text" placeholder="ФИО" id="FIO__input">
+                    </section>
+                    <section class="parameters-filter__container">
+                        <h3 class="parametr-filter__title">Факультет</h3>
+                        <input type="text" placeholder="Факультет" id="faculty__input">
+                    </section>
+                    <section class="parameters-filter__container">
+                        <h3 class="parametr-filter__title">Год начала обучение</h3>
+                        <input type="text" placeholder="Год начала обучение" id="start-edu__input">
+                    </section>
+                    <section class="parameters-filter__container">
+                        <h3 class="parametr-filter__title">Год окончания обучение</h3>
+                        <input type="text" placeholder="Год окончания обучение" id="end-edu__input">
+                    </section>
+                </article>
+            </div>
+
+            <table class="database__table">
+                <tr>
+                    <td class="name-column FIO__cell" style="background-color: #5B5B5B;">ФИО</td>
+                    <td class="name-column faculty__cell"  style="background-color: #5B5B5B;">Направление</td>
+                    <td class="name-column birthday__cell" style="background-color: #5B5B5B;">Дата рождения</td>
+                    <td class="name-column study-years__cell" style="background-color: #5B5B5B;">Годы обучения</td>
+                    <td class="name-column delete-student__cell" style="background-color: #5B5B5B;">Удалить</td>
+                </tr>
+                <tr>
+                    <td class="FIO__cell">Иванов Иван Иванович</td>
+                    <td class="faculty__cell">Frontend</td>
+                    <td class="birthday__cell">01.01.2001</td>
+                    <td class="study-years__cell">2020-2024 (4 курс)</td>
+                    <td class="delete-student__cell">Х</td>
+                </tr>
+                <tr>
+                    <td class="FIO__cell">Ольгина Ольга Олеговна</td>
+                    <td class="faculty__cell">Backend</td>
+                    <td class="birthday__cell">01.01.2001</td>
+                    <td class="study-years__cell">2019-2023 (закончила)</td>
+                    <td class="delete-student__cell">Х</td>
+                </tr>
+                <tr>
+                    <td class="FIO__cell">Васечкин Василий Васильевич</td>
+                    <td class="faculty__cell">Design</td>
+                    <td class="birthday__cell">01.01.2001</td>
+                    <td class="study-years__cell">2022-2026 (2 курс)</td>
+                    <td class="delete-student__cell">Х</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="input-info__container">
+            <h2 class="add-info__title">Добавить</h2>
+            <article class="inputs-all__container">
+                <section class="input__container">
+                    <p class="parameter-input__title">Фамилия</p>
+                    <input type="text" placeholder="Фамилия" id="last-name__input">
+                </section>
+                <section class="input__container">
+                    <p class="parameter-input__title">Имя</p>
+                    <input type="text" placeholder="Имя" id="first-name__input">
+                </section>
+                <section class="input__container">
+                    <p class="parameter-input__title">Отчество</p>
+                    <input type="text" placeholder="Отчество" id="patronymic__input">
+                </section>
+                <section class="input__container">
+                    <p class="parameter-input__title">Дата рождения</p>
+                    <input type="text" placeholder="Дата рождения" id="birthday__input">
+                </section>
+                <section class="input__container">
+                    <p class="parameter-input__title">Год начала обучения</p>
+                    <input type="text" placeholder="Год начала обучения" id="start-education__input">
+                </section>
+                <section class="input__container">
+                    <p class="parameter-input__title">Направление</p>
+                    <input type="text" placeholder="Направление" id="specific-faculty__input">
+                </section>
+            </article>
+            <button class="add-student__button">Добавить студента</button>
+        </div>
+    </div>  
+</body>
+</html>
