@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  background-color: #adff2f;
+  border: 5px solid green;
+  border-radius: 20px;
+  width: 600px;
+  height: 300px;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.content {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  display: flex;
+}
+
+.card-num__container {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  height: 55px;
+  font-size: 20px;
+  display: flex;
+}
+
+.card-num__title {
+  font-family: sans-serif;
+}
+
+.card-num__input {
+  border-radius: 5px;
+  width: 100%;
+  height: 45px;
+  margin-top: 5px;
+}
+
+.one-line__container {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 10px;
+  display: flex;
+}
+
+.cvv-code__container {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  height: 50px;
+  display: flex;
+}
+
+.cvv-code__title {
+  font-family: sans-serif;
+}
+
+.cvv-code__input {
+  border-radius: 5px;
+  width: 200px;
+  height: 35px;
+  margin-top: 5px;
+}
+
+.date__container {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  height: 50px;
+  display: flex;
+}
+
+.date__title {
+  font-family: sans-serif;
+}
+
+.date__input {
+  border-radius: 5px;
+  width: 200px;
+  height: 35px;
+  margin-top: 5px;
+}
+
+.full-name__container {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  height: 55px;
+  margin-top: 10px;
+  font-size: 20px;
+  display: flex;
+}
+
+.full-name__title {
+  font-family: sans-serif;
+}
+
+.full-name__input {
+  border-radius: 5px;
+  width: 100%;
+  height: 35px;
+  margin-top: 5px;
+}
+
+.pay__button {
+  color: #fff;
+  background-color: red;
+  border: 1px solid #000;
+  border-radius: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  margin-left: 30px;
+  transition: all .4s;
+  display: flex;
+}
+
+.pay__button:hover {
+  color: #000;
+  cursor: pointer;
+  background-color: #f5f5f5;
+}
+
+.images__container {
+  width: 200px;
+  height: 200px;
+  margin-top: 150px;
+  margin-left: 100px;
+}
+/*# sourceMappingURL=index.3a01df49.css.map */

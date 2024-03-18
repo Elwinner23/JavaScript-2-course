@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 600px;
+    height: 300px;
+    background-color: greenyellow;
+    border: 5px solid green;
+    border-radius: 20px;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.card-num__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 55px;
+    width: 80%;
+    font-size: 20px;
+}
+
+.card-num__title{
+    font-family: sans-serif;
+}
+
+.card-num__input{
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+
+.one-line__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 80%;
+}
+
+
+
+.cvv-code__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 50px;
+}
+
+.cvv-code__title{
+    font-family: sans-serif;
+}
+
+.cvv-code__input{
+    height: 35px;
+    width: 200px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+
+
+
+.date__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 50px;
+}
+
+.date__title{
+    font-family: sans-serif;
+}
+
+.date__input{
+    height: 35px;
+    width: 200px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+
+
+.full-name__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 55px;
+    width: 80%;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.full-name__title{
+    font-family: sans-serif;
+}
+
+.full-name__input{
+    height: 35px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+
+.pay__button{
+    border: 1px solid black;
+    color: white;
+    background-color: red;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    transition: all 0.4s;
+}
+.pay__button:hover{
+    color: black;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+
+.images__container{
+    width: 200px;
+    height: 200px;
+    margin-top: 150px;
+    margin-left:100px;
+}

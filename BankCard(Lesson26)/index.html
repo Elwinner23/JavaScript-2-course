@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js" defer></script>
+    <title>BankCard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="card-num__container">
+                <h4 class="card-num__title">Номер карты</h4>
+                <input type="text" name="Номер" class="card-num__input" id="card-num__input" maxlength="19">
+            </div>
+            <div class="one-line__container">
+                <div class="cvv-code__container">
+                    <h4 class="cvv-code__title">Проверочный код</h4>
+                    <input type="text" name="Код" class="cvv-code__input" id="cvv-code__input" maxlength="3">
+                </div>
+                <div class="date__container">
+                    <h4 class="date__title">Срок действия</h4>
+                    <input type="text" name="месяц/год" class="date__input" id="date__input" maxlength="5">
+                </div>
+            </div>
+            <div class="full-name__container">
+                <h4 class="username__title">Имя владельца</h4>
+                <input type="text" name="Имя Фамилия (латиницей)" class="full-name__input" id="full-name__input">
+            </div>
+        </div>
+        <button class="pay__button" id="pay__button">Оплатить</button>
+    </div>
+
+    <div class="images__container">
+        <h3>Состояние:</h3>
+        <img src="images/VeryBad.jpg" width="200px" height="200px" id="image1">
+    </div>
+</body>
+</html>
