@@ -1,0 +1,177 @@
+html {
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+input {
+  border: none;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 15px 150px;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  max-width: 400px;
+  background-color: rgb(67, 66, 66);
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 27px 0px rgba(34, 60, 80, 0.2);
+}
+
+
+.card-form {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.card-label {
+  color: rgb(67, 66, 66);
+  position: absolute;
+  pointer-events: none;
+  padding-left: 10px;
+  font-size: 11px;
+  top: 3px;
+}
+
+.card-block {
+  position: relative;
+}
+
+.card-block:first-child {
+  margin-bottom: 20px;
+}
+
+.card-input {
+  padding: 17px 10px 5px 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+.input-number {
+  max-width: 400px;
+  width: 100%;
+}
+
+.input-email {
+  max-width: 245px;
+  width: 100%;
+}
+
+.input-date {
+  max-width: 115px;
+}
+
+.input-code {
+  max-width: 115px;
+}
+
+.card-block-center {
+  display: flex;
+}
+
+.card-block-center .card-block:first-child {
+  margin-right: 15px;
+}
+
+.btn {
+  max-width: 200px;
+  width: 100%;
+  margin-left: 100px;
+  padding: 15px;
+  color: azure;
+  background-color: rgb(255, 144, 26);
+  border: 1px solid rgb(255, 144, 26);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(236, 123, 2);
+  border: 1px solid rgb(236, 123, 2);
+}
+
+.btn:active {
+  background-color: rgb(205, 106, 0);
+  border: 1px solid rgb(205, 106, 0);
+}
+
+.btn:disabled {
+  color: burlywood;
+  cursor: no-drop;
+}
+
+.btn:disabled:hover {
+  color: burlywood;
+  cursor: no-drop;
+  background-color: rgb(255, 144, 26);
+  border: 1px solid rgb(255, 144, 26);
+}
+
+.btn:disabled:active {
+  color: burlywood;
+  cursor: no-drop;
+  background-color: rgb(255, 144, 26);
+  border: 1px solid rgb(255, 144, 26);
+}
+
+.card-input.invalid {
+  border: 1px solid red;
+}
+
+.card-label.invalid {
+  color: red;
+}
+
+.card-img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 35px;
+  right: 28px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-image: url("./Visa.png"); */
+}
