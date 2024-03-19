@@ -30,7 +30,7 @@ document.getElementById("submitButton").addEventListener("click", async function
       try {
         const response = await fetch('http://localhost:3000/api/students', {
           method: 'post',
-          body: JSON.stringify({ name, surname, lastname, birthday, studystart, faculty }),
+          body: JSON.stringify({ name: name, surname: surname, lastname: lastname, birthday: birthday, studystart: studystart, faculty: faculty }),
           headers: { 'Content-Type': 'application/json' }
         }); 
         if (response.ok) {
