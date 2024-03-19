@@ -4,7 +4,7 @@
   "description": "",
   "main": "card.js",
   "scripts": {
-    "dev": "parcel card.html"
+    "dev": "parcel card.html --no-cache"
   },
   "author": "",
   "license": "ISC",

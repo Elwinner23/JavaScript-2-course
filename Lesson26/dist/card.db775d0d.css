@@ -1,0 +1,262 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500";
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  --card-color: #cacaca;
+  --text-color: #e1e1e1;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.tips {
+  background: #f1f1f1;
+  width: 100%;
+  height: 30px;
+  padding: 2px 15px;
+  font-size: 14px;
+  line-height: 30px;
+  position: fixed;
+  bottom: 0;
+}
+
+.container {
+  flex-direction: row;
+  align-items: center;
+  width: 680px;
+  margin: auto;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+
+.col1 {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.card {
+  transform-style: preserve-3d;
+  border-radius: 17px;
+  width: 420px;
+  height: 250px;
+  margin-bottom: 85px;
+  margin-right: 10px;
+  transition: all 1s;
+  position: relative;
+  box-shadow: 0 5px 20px -5px #0000001a;
+}
+
+.front {
+  background: var(--card-color);
+  z-index: 50;
+  backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  background-image: repeating-linear-gradient(45deg, #fff0 1px, #ffffff08 2px, #ffffff0a 3px, #ffffff0d 4px), -webkit-linear-gradient(-245deg, #fff0 40%, #fff3 70%, #fff0 90%);
+  border-radius: 17px;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  transition: background .3s;
+  position: absolute;
+  transform: translateZ(1px);
+}
+
+.type {
+  width: 75px;
+  height: 45px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+img {
+  float: right;
+  width: 100%;
+}
+
+.card_number {
+  letter-spacing: -1px;
+  color: var(--text-color);
+  word-spacing: 3px;
+  font-size: 26px;
+  font-weight: 500;
+  transition: color .5s;
+  position: absolute;
+  top: 110px;
+}
+
+.date {
+  color: var(--text-color);
+  width: 90px;
+  height: 35px;
+  transition: color .5s;
+  position: absolute;
+  bottom: 40px;
+  right: 55px;
+}
+
+.date_value {
+  color: var(--text-color);
+  margin-top: 12px;
+  margin-left: 22px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: color .5s;
+  position: absolute;
+}
+
+.date_value:after {
+  content: "MONTH / YEAR";
+  margin-left: 20px;
+  font-size: 7px;
+  display: block;
+  position: absolute;
+}
+
+.date_value:before {
+  content: "valid \a thru";
+  white-space: pre;
+  margin-top: 8px;
+  font-size: 8px;
+  display: block;
+  position: absolute;
+}
+
+.fullname {
+  color: var(--text-color);
+  font-size: 20px;
+  transition: color .5s;
+  position: absolute;
+  bottom: 40px;
+}
+
+.back {
+  background: var(--card-color);
+  border-radius: 17px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: rotateY(180deg);
+}
+
+.magnetic {
+  background: #000000b3;
+  width: 100%;
+  height: 50px;
+  margin-top: 25px;
+  position: absolute;
+}
+
+.bar {
+  background: #ffffffb3;
+  width: 80%;
+  height: 37px;
+  margin-top: 100px;
+  position: absolute;
+  left: 10px;
+}
+
+.seccode {
+  color: var(--text-color);
+  font-size: 13px;
+  font-weight: 500;
+  position: absolute;
+  top: 100px;
+  right: 40px;
+}
+
+.chip2 {
+  bottom: 45px;
+  left: 10px;
+}
+
+.disclaimer {
+  color: #f1f1f1;
+  width: 65%;
+  font-size: 8px;
+  position: absolute;
+  bottom: 55px;
+  left: 80px;
+}
+
+input {
+  background: #0000000d;
+  border: none;
+  border-radius: 20px;
+  width: 260px;
+  height: 30px;
+  margin: 7px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  font-size: 17px;
+  transition: background .5s;
+  display: block;
+}
+
+input:focus {
+  background: #1f86fc26;
+  outline-width: 0;
+  transition: background .5s;
+}
+
+label {
+  color: #444;
+  padding-left: 8px;
+  font-size: 15px;
+}
+
+.ccv {
+  width: 40%;
+}
+
+.buy {
+  color: #fff;
+  cursor: pointer;
+  background: #2c79ff;
+  border: none;
+  border-radius: 10px;
+  width: 260px;
+  height: 50px;
+  margin: 20px auto;
+  font-size: 20px;
+  transition: background .4s;
+  display: block;
+  position: relative;
+}
+
+i {
+  font-size: 20px;
+}
+
+i:hover {
+  background: #3594a9;
+  transition: background .4s;
+}
+
+.chip1, .chip2 {
+  background: #bbb;
+  border-radius: 7px;
+  width: 55px;
+  height: 40px;
+  position: absolute;
+}
+
+.chip1:after, .chip2:after {
+  content: "";
+  background: #ddd;
+  border-radius: 4px;
+  width: 35px;
+  height: 25px;
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+/*# sourceMappingURL=card.db775d0d.css.map */
