@@ -1,0 +1,122 @@
+h1{
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-size: 36;
+    margin-left: -5%;
+}
+
+h2{
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 24;
+}
+
+right{
+    background-color: #C6C6C6;
+    padding-left: 10%;
+    border-radius: 5px;
+    height: 130%;
+    margin-top: 10%;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 80% 20%
+}
+
+.filters{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.title{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.inp_right{
+    margin-bottom: 10%;
+    width: 85%;
+    height: 6%;
+    border: none;
+    border-radius: 4px;
+    padding-left: 7px;
+    color: #000000;
+}
+
+.inp_left{
+    margin-bottom: 10%;
+    width: 120%;
+    height: 60%;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: #d2d2d2;
+    padding-left: 7px;
+    color: #000000;
+}
+
+input::placeholder{
+    color: #d2d2d2;
+}
+
+table {
+    margin-left: 7%;
+    margin-top: 5%;
+    width: 90%;
+    border-collapse: collapse;
+    border-left: none;
+}
+
+th {
+    border: 1px solid #d2d2d2;
+    background-color: #5B5B5B;
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 12px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-top: none;
+}
+
+td {
+    border: 1px solid #d2d2d2;
+    background-color: #535252;
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+}
+
+th:first-child {
+    border-left-style: solid;
+    border-top-left-radius: 10px; 
+    border: none;
+}
+th:last-child {
+    border: none;
+    border-top-right-radius: 10px;
+}
+
+tr:last-child{
+    border-bottom-right-radius: 10px;
+}
+
+.add{
+    margin-bottom: 10%;
+    width: 70%;
+    height: 6%;
+    border: none;
+    border-radius: 4px;
+    padding-left: 7px;
+    color: #ffffff;
+    background-color: #5E5BFF;
+}
