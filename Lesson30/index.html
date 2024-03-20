@@ -19,57 +19,57 @@
             <div class="filters">
                 <div class="filter">
                     <p class="title">ФИО</p>
-                    <input class="inp_left" type="text" placeholder="ФИО"/>
+                    <input id="searchID" class="inp_left" type="text" placeholder="ФИО"/>
                 </div>
                 <div class="filter">
                     <p class="title">Факультет</p>
-                    <input class="inp_left" type="text" placeholder="Факультет"/>
+                    <input id="searchFac" class="inp_left" type="text" placeholder="Факультет"/>
                 </div>
                 <div class="filter">
-                    <p class="title">Год начала обучения</p>
-                    <input class="inp_left" type="text" placeholder="Год начала обучения"/>
+                    <p class="title">Дата рождения</p>
+                    <input id="searchBitrh" class="inp_left" type="text" placeholder="Дата рождения"/>
                 </div>
                 <div class="filter">
                     <p class="title">Год окончания обучения</p>
-                    <input class="inp_left" type="text" placeholder="Год окончания обучения"/>
+                    <input id="searchStart" class="inp_left" type="text" placeholder="Год начала обучения"/>
                 </div>
             </div>
-            <table>
-                <tr>
+            <table id="full_student">
+                <thead>
+                  <tr>
                     <th>ФИО</th>
                     <th>Направление</th>
                     <th>Дата рождения</th>
                     <th>Годы обучения</th>
                     <th>Удалить</th>
-                </tr>
-
-                <tr>
-                    <td>Юра</td>
-                    <td>45.03.03</td>
-                    <td>28.08.2005</td>
-                    <td>2023-2027</td>
-                    <td style="text-align: center;">Х</td>
-                </tr>
-
-            </table>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            <button id="obnova">Обновить</button>
+            <button id="searchi">Найти по айди</button>
+            <button id="upd">Изменить</button>
         </left>
 
         <right>
             <h1>Добавить</h1>
             <p class="title">Фамилия</p>
-            <input class="inp_right" type="text" placeholder="Фамилия"/>
+            <input class="inp_right" type="text" id="fam" placeholder="Фамилия"/>
             <p class="title">Имя</p>
-            <input class="inp_right" type="text" placeholder="Имя"/>
+            <input class="inp_right" type="text" id="name" placeholder="Имя"/>
             <p class="title">Отчество</p>
-            <input class="inp_right" type="text" placeholder="Отчество"/>
+            <input class="inp_right" type="text" id="oth" placeholder="Отчество"/>
             <p class="title">Дата Рождения</p>
-            <input class="inp_right" type="text" placeholder="Дата Рождения"/>
+            <input class="inp_right" type="text" id="birth" placeholder="Дата Рождения"/>
             <p class="title">Год начала обучения</p>
-            <input class="inp_right" type="text" placeholder="Год начала обучения"/>
+            <input class="inp_right" type="text" id="start" placeholder="Год начала обучения"/>
             <p class="title">Направние</p>
-            <input class="inp_right" type="text" placeholder="Направление"/>
-            <button class="add">Добавить студента</button>
+            <input class="inp_right" type="text" id="naprav" placeholder="Направление"/>
+            <button id="btn" class="add">Добавить студента</button>
         </right>
     </main>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 </html>
