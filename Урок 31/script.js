@@ -1,4 +1,4 @@
-let name = document.getElementById("name")
+let name1 = document.getElementById("name")
 let surname = document.getElementById("surname")
 let lastname = document.getElementById("lastname")
 let birthday = document.getElementById("birthday")
@@ -14,12 +14,12 @@ button.addEventListener('click', async () => {
         try {
           const response = await fetch('http://localhost:3000/api/students', {
             method: 'post',
-            body: JSON.stringify({name: name.value, surname: surname.value, lastname: lastname.value, birthday: birthday.value, studyStart: year1.value, faculty: faculty.value}),
+            body: JSON.stringify({name: name1.value, surname: surname.value, lastname: lastname.value, birthday: birthday.value, studyStart: year1.value, faculty: faculty.value}),
             headers: { 'Content-Type': 'application/json' }
           }); 
           if (response.ok) {
             button.innerHTML = "Добавить студента";
-            name.style.border = "none";
+            name1.style.border = "none";
             surname.style.border = "none";
             lastname.style.border = "none";
             birthday.style.border = "none";
@@ -31,8 +31,8 @@ button.addEventListener('click', async () => {
         } catch (error) {
           console.error(error);
           button.innerHTML = "Произошла ошибка";
-          if (name.value === "") {name.style.border = "1px solid red";}
-          else{name.style.border = "none";}
+          if (name1.value === "") {name1.style.border = "1px solid red";}
+          else{name1.style.border = "none";}
           if (surname.value === "") {surname.style.border = "1px solid red";}
           else{surname.style.border = "none";}
           if (lastname.value === "") {lastname.style.border = "1px solid red";}
