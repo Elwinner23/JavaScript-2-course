@@ -44,32 +44,34 @@
                 <th>Годы обучения</th>
                 <th>Удалить</th>
             </tr>
-            </thead>
-            <tbody>
+            
+            
             <tr>
                 <td>Иванов Иван Иванович</td>
                 <td>Frontend</td>
                 <td>01.01.2001</td>
                 <td>2020-2024 (4 курс)</td>
-                <td>Х</td>
+                <td><button class="deleteButton" data-id="${student.id}" style="background-color: #363636; color: white; border: none;">X</button></td>
+
             </tr>
             <tr>
                 <td>Ольгина Ольга Олеговна</td>
                 <td>Backend</td>
                 <td>01.01.2001</td>
                 <td>2019-2023 (закончил)</td>
-                <td>Х</td>
+                <td><button class="deleteButton" data-id="${student.id}" style="background-color: #363636; color: white; border: none;">X</button></td>
             </tr>
             <tr>
                 <td>Васечкин Василий Васильевич</td>
                 <td>Design</td>
                 <td>01.01.2001</td>
                 <td>2022-2026 (2 курс)</td>
-                <td>Х</td>
+                <td><button class="deleteButton" data-id="${student.id}" style="background-color: #363636; color: white; border: none;">X</button></td>
             </tr>
+        </thead>
+        <tbody>
         </tbody>
         </table>
-        <button id="obnov_table">Обновить таблицу</button>
     </div>
   
 
