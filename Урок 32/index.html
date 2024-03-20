@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Студенты</h1>
+    <div class="block1">
+        <h2>Фильтры</h2>
+        <div class="filters">
+                <div class="f">
+                    <label for="FIO">ФИО</label>
+                    <input id="filterName" type="text" class="input1" name="FIO" placeholder="ФИО">
+                </div>
+
+                <div class="f">
+                    <label for="faculty">Факультет</label>
+                    <input id="filterFaculty" type="text" class="input1" name="faculty" placeholder="Факультет">
+                </div>
+
+                <div class="f">
+                    <label for="year-begin">Год рождения</label>
+                    <input id="filterStartYear" type="text" class="input1" name="year-begin" placeholder="Год начала обучения">
+                </div>
+
+                <div class="f">
+                    <label for="year-end">Годы обучения</label>
+                    <input id="filterEndYear" type="text" class="input1" name="year-end" placeholder="Год окончания обучения">
+                </div>
+        </div>
+
+        <table id="table">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">ФИО <small><sup>↑ ↓</sup></small></th>
+                    <th onclick="sortTable(1)">Направление <small><sup>↑ ↓</sup></small></th>
+                    <th onclick="sortTable(2)">Дата рождения <small><sup>↑ ↓</sup></small></th>
+                    <th onclick="sortTable(3)">Годы обучения <small><sup>↑ ↓</sup></small></th>
+                    <th>Удалить</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+  
+    <div class="block2">
+        <h2>Добавить</h2>
+        <div class="inputs">
+            <div class="a">
+                <label for="surname">Фамилия</label>
+                <input id="surname" type="text" class="input2" name="surname"  placeholder="Фамилия">
+            </div>
+
+            <div class="a">
+                <label for="name">Имя</label>
+                <input  id="name" type="text" class="input2" name="name" placeholder="Имя">
+            </div>
+
+            <div class="a">
+                <label for="lastname">Отчество</label>
+                <input id="lastname" type="text" class="input2" name="lastname"  placeholder="Отчество">
+            </div>
+
+            <div class="a">
+                <label for="birthday">Дата Рождения</label>
+                <input id="birthday" type="text" class="input2" name="birthday"  placeholder="Дата Рождения">
+            </div>
+
+            <div class="a">
+                <label for="year1">Год начала обучения</label>
+                <input id="year1" type="text" class="input2" name="year1"  placeholder="Год начала обучения">
+            </div>
+
+            <div class="a">
+                <label for="direction">Направление</label>
+                <input id="direction" type="text" class="input2" name="direction"  placeholder="Направление">
+            </div>
+            
+        </div>
+        <button id="addStud">Добавить студента</button>    
+    </div>
+
+    
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>
