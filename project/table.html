@@ -19,39 +19,36 @@
             <div class="filters">
                 <div class="filter">
                     <p class="title">ФИО</p>
-                    <input class="inp_left" type="text" placeholder="ФИО"/>
+                    <input id = "search_name" class="inp_left" type="text" placeholder="ФИО"/>
                 </div>
                 <div class="filter">
                     <p class="title">Факультет</p>
-                    <input class="inp_left" type="text" placeholder="Факультет"/>
+                    <input id = "search_majority" class="inp_left" type="text" placeholder="Факультет"/>
                 </div>
                 <div class="filter">
                     <p class="title">Год начала обучения</p>
-                    <input class="inp_left" type="text" placeholder="Год начала обучения"/>
+                    <input id = "search_fyear" class="inp_left" type="text" placeholder="Год начала обучения"/>
                 </div>
                 <div class="filter">
                     <p class="title">Год окончания обучения</p>
-                    <input class="inp_left" type="text" placeholder="Год окончания обучения"/>
+                    <input id = "search_lyear" class="inp_left" type="text" placeholder="Год окончания обучения"/>
                 </div>
             </div>
-            <table>
-                <tr>
-                    <th>ФИО</th>
-                    <th>Направление</th>
-                    <th>Дата рождения</th>
-                    <th>Годы обучения</th>
-                    <th>Удалить</th>
-                </tr>
+            <table id="full">
+                <thead>
+                    <tr>
+                        <th>ФИО</th>
+                        <th>Направление</th>
+                        <th>Дата рождения</th>
+                        <th>Годы обучения</th>
+                        <th>Удалить</th>
+                    </tr>
+                </thead>
 
-                <tr>
-                    <td>ФИО</td>
-                    <td>Направление</td>
-                    <td>Дата рождения</td>
-                    <td>Годы обучения</td>
-                    <td>Удалить</td>
-                </tr>
-
+                <tbody>
+                </tbody>
             </table>
+            <button class="but" id = "update">Обновить</button>
         </left>
 
         <right>

@@ -119,6 +119,24 @@ tr:last-child{
     padding-left: 7px;
     color: #ffffff;
     background-color: #5E5BFF;
+    cursor: pointer;
 }
 
+.but{
+    margin-top: 5%;
+    margin-left: 7%;
+    width: 20%;
+    height: 6%;
+    border: none;
+    border-radius: 4px;
+    padding-left: 7px;
+    color: #ffffff;
+    background-color: #5E5BFF;
+    cursor: pointer;
+}
 
+.deleteButton{
+    background-color: #535252;
+    border: none;
+    cursor: pointer;
+}
