@@ -14,7 +14,7 @@
         <div class="panel">
             <div class="filters">
                 <h2>Фильтры</h2>
-                <div class="criteria">
+                <form class="criteria" autocomplete="off">
                     <div class="criteria_input">
                         <label for="fio">ФИО</label>
                         <input type="text" placeholder="ФИО" name="fio" id="fio">
@@ -24,23 +24,28 @@
                         <input type="text" placeholder="Направление" name="faculty" id="faculty">
                     </div>
                     <div class="criteria_input">
-                        <label for="year_the_beginning_of_training">Год начало обучения</label>
-                        <input type="text" placeholder="Год начало обучения" name="year_the_beginning_of_training" id="year_the_beginning_of_training">
+                        <label for="birthday">Дата рождения</label>
+                        <input type="text" placeholder="Дата рождения" name="birthday" id="birthday">
                     </div>
                     <div class="criteria_input">
-                        <label for="year_of_graduation">Год окончания обучения</label>
-                        <input type="text" placeholder="Год окончания обучения" name="year_of_graduation" id="year_of_graduation">
-                    </div>
+                        <label for="studyStart">Год начало обучения</label>
+                        <input type="text" placeholder="Год начало обучения" name="studyStart" id="studyStart">
+                    </div>   
+                </form>
+                <div class="filter_button_obor">
+                    <button id="filter_button">Фильтровать</button>
                 </div>
-                <table id="table">
-                    <tr>
-                        <td>ФИО</td>
-                        <td>Направление</td>
-                        <td>Дата рождения</td>
-                        <td>Годы обучения</td>
-                        <td>Удалить</td>
-                    </tr>
-                </table>
+                <div class="table_obor">
+                    <table id="table">
+                        <tr>
+                            <td>ФИО</td>
+                            <td>Направление</td>
+                            <td>Дата рождения</td>
+                            <td>Годы обучения</td>
+                            <td>Удалить</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div class="add">
                 <h2>Добавить</h2>

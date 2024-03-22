@@ -16,6 +16,16 @@ label{
     font-size: 14px;
     margin-left: 2px;
 }
+button{
+    width: 162px;
+    background-color: #5E5BFF;
+    height: 48px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+}
 input{
     height: 48px;
     padding: 15px;
@@ -40,7 +50,8 @@ input::placeholder{
     display: flex;
     justify-content: space-between;
     align-items: start;
-    margin-bottom: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
 }
 .criteria_input{
     width: 22%;
@@ -48,6 +59,13 @@ input::placeholder{
 
 .criteria_input input{
     width: 100%;
+}
+.filter_button_obor{
+    width: 100%;
+    margin-bottom: 30px;
+}
+#filter_button{
+    margin: auto;
 }
 .add{
     width: 391px;
@@ -65,14 +83,10 @@ input::placeholder{
 .add_input input{
     width: 100%;
 }
-.add button{
-    width: 162px;
-    background-color: #5E5BFF;
-    height: 48px;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.table_obor{
+    height: 576px;
+    overflow-y: auto;
+    position: relative;
 }
 table{
     width: 100%;
@@ -80,6 +94,7 @@ table{
     color: white;
     font-size: 12px;
     border-collapse: collapse;
+    
 }
 tr{
     background-color: #373737;
@@ -89,6 +104,8 @@ tr:nth-child(1){
     text-align: center;
     font-weight: 500;
     background-color: #404040;
+    position: sticky;
+    top: -.5px;
 }
 td{
     border: none;
