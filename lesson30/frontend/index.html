@@ -45,11 +45,7 @@
                     </thead>
                     <tbody>
                        <tr id="data" class="text-[16px]">
-                         <td class="border-2 indent-[12px]">Данные 1,1</td>
-                         <td class="border-2 indent-[12px]">Данные 1,2</td>
-                         <td class="border-2 indent-[12px]">Данные 1,3</td>
-                         <td class="border-2 indent-[12px]">Данные 2,3</td>
-                         <td class="border-2 text-center"><button>X</button></td>
+
                        </tr>
                     </tbody>
                    </table>    
@@ -61,32 +57,34 @@
                     <h1 class="text-center font-bold text-2xl">Добавить</h1>
                     <div class="flex flex-col">
                         <span>Фамилия</span>
-                        <input class="w-[240px] h-[30px] rounded" type="text">
+                        <input id="surname" class="w-[240px] h-[30px] rounded text-black indent-2" type="text">
                     </div>
                     <div class="flex flex-col">
                         <span>Имя</span>
-                        <input class="w-[240px] h-[30px] rounded" type="text">
+                        <input id="name" class="w-[240px] h-[30px] rounded text-black indent-2" type="text">
                     </div>
                     <div class="flex flex-col">
                         <span>Отчество</span>
-                        <input class="w-[240px] h-[30px] rounded" type="text">
+                        <input id="middle_name" class="w-[240px] h-[30px] rounded text-black indent-2" type="text">
                     </div>
                     <div class="flex flex-col">
                         <span>Дата Рождения</span>
-                        <input class="w-[240px] h-[30px] rounded" type="number">
+                        <input id="date_of_birth" class="w-[240px] h-[30px] rounded text-black indent-2" type="text">
                     </div>
                     <div class="flex flex-col">
                         <span>Год начала обучение</span>
-                        <input class="w-[240px] h-[30px] rounded" type="number">
+                        <input id="year_of_commencement" class="w-[240px] h-[30px] rounded text-black indent-2" type="text">
                     </div>
                     <div class="flex flex-col">
                         <span>Направление</span>
-                        <input class="w-[240px] h-[30px] rounded" type="text">
+                        <input id="direction" class="w-[240px] h-[30px] rounded text-black indent-2" type="text">
                     </div>
-                    <button class="bg-cyan-600 shadow-md transition duration-200 ease-out px-2 py-2 rounded-full font-bold hover:shadow-cyan-600/60 hover:scale-105">Добавить студента</button>
+                    <button id="addstudent" class="bg-cyan-600 shadow-md transition duration-200 ease-out px-2 py-2 rounded-full font-bold hover:shadow-cyan-600/60 hover:scale-105">Добавить студента</button>
                 </div>
             </div>
         </div>
     </div>
+
+<script src="src/js/script.js"></script>
 </body>
 </html>
