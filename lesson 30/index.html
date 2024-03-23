@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -21,28 +22,28 @@
                 
                 <form action="">
                     <p>ФИО</p>
-                    <input type="text" placeholder="ФИО">
+                    <input class="filter" type="text" placeholder="ФИО">
                 </form>
 
                 <form action="">
                     <p>Фaкультет</p>
-                    <input type="text" placeholder="Факультет">
+                    <input class="filter" type="text" placeholder="Факультет">
                 </form>
 
 
                 <form action="">
                     <p>Год начала обучения</p>
-                    <input type="text" placeholder="Год начала обучения">
+                    <input class="filter" type="text" placeholder="Год начала обучения">
                 </form>
 
                 <form action="">
                     <p>Год окончания обучения</p>
-                    <input type="text" placeholder="Год окончания обучения">
+                    <input class="filter" type="text" placeholder="Год окончания обучения">
                 </form>
             </div>
 
             <div class="allTable">
-                <table>
+                <table id="table">
                     <tr>
                         <th>Фио</th>
                         <th>Направление</th>
@@ -74,52 +75,37 @@
                 </table>
             </div>
         </div>
-
-        <form action="">
-        <div class="rightForm">
-       
-            <h3>Добавить</h3>
-
-         
-                <div>
-                <p>Фамилия</p>
-                <input class="right_form" type="text" placeholder="ФИО">
+            <div class="add">
+                <h2>Добавить</h2>
+                <div class="add_input">
+                    <label for="surname">Фамилия</label>
+                    <input type="text" name="surname" id="surname" placeholder="Фамилия">
                 </div>
-
-            
-                <div>
-                <p>Имя</p>
-                <input class="right_form" type="text" placeholder="ФИО">
+                <div class="add_input">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" placeholder="Имя">
                 </div>
-
-                <div>
-                <p>Отчество</p>
-                <input class="right_form" type="text" placeholder="ФИО">
+                <div class="add_input">
+                    <label for="fatherland">Отечество</label>
+                    <input type="text" id="fatherland" name="fatherland" placeholder="Отечество">
                 </div>
-
-                <div>
-                <p>Дата Рождения</p>
-                <input class="right_form" type="text" placeholder="ФИО">
+                <div class="add_input">
+                    <label for="date_of_birth">Дата рождения</label>
+                    <input type="text" name="date_of_birth" id="date_of_birth" placeholder="Дата рождения">
                 </div>
-
-
-                <div>
-                <p>Год начала обучение</p>
-                <input class="right_form" type="text" placeholder="ФИО">
+                <div class="add_input">
+                    <label for="year_the_beginning_of_training2">Год начала обучения</label>
+                    <input type="text" name="year_the_beginning" id="year_the_beginning" placeholder="Год начала обучения">
                 </div>
-
-                <div>
-                <p>Направление</p>
-                <input class="right_form" type="text" placeholder="ФИО">
+                <div class="add_input">
+                    <label for="direction">Направление</label>
+                    <input type="text" name="direction" id="direction" placeholder="Направление">
                 </div>
-
-
                 <div class="button_div">
-                    <button>Добавить студента</button>
+                <button id="add">Добавить студента</button>
                 </div>
             </div>
-        </form>
-    </div>
+        </div>
     </main>
 </body>
 </html>
