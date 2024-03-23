@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Table student</title>
+</head>
+<body>
+    <main>
+        <h1>Студенты</h1>
+        <div class="all_content">
+            
+        <div>
+            <h2>Фильтры</h2>
+            <div class="allForm">
+                
+                <form action="">
+                    <p>ФИО</p>
+                    <input type="text" placeholder="ФИО">
+                </form>
+
+                <form action="">
+                    <p>Фaкультет</p>
+                    <input type="text" placeholder="Факультет">
+                </form>
+
+
+                <form action="">
+                    <p>Год начала обучения</p>
+                    <input type="text" placeholder="Год начала обучения">
+                </form>
+
+                <form action="">
+                    <p>Год окончания обучения</p>
+                    <input type="text" placeholder="Год окончания обучения">
+                </form>
+            </div>
+
+            <div class="allTable">
+                <table>
+                    <tr>
+                        <th>Фио</th>
+                        <th>Направление</th>
+                        <th>Дата рождения</th>
+                        <th>Годы обучения</th>
+                        <th id="delete">Удалить</th>
+                    </tr>
+                    <tr>
+                        <td>Иванов Иван Иванович</td>
+                        <td>Frontend</td>
+                        <td>01.01.2001</td>
+                        <td>2020-2024 (4 курс)</td>
+                        <td class="X">Х</td>
+                    </tr>
+                    <tr>
+                        <td>Ольгина Ольга Олеговна</td>
+                        <td>Backend</td>
+                        <td>01.01.2001</td>
+                        <td>2019-2023 (закончил)</td>
+                        <td class="X">Х</td>
+                    </tr>
+                    <tr>
+                        <td>Васечкин Василий Васильевич</td>
+                        <td>Design</td>
+                        <td>01.01.2001</td>
+                        <td>2022-2026 (2 курс)</td>
+                        <td class="X">Х</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="rightForm">
+            <h3>Добавить</h3>
+
+         
+            <form action="">
+                <p>Фамилия</p>
+                <input class="right_form" type="text" placeholder="ФИО">
+            </form>
+
+            
+            <form action="">
+                <p>Имя</p>
+                <input class="right_form" type="text" placeholder="ФИО">
+            </form>
+
+            <form action="">
+                <p>Отчество</p>
+                <input class="right_form" type="text" placeholder="ФИО">
+            </form>
+
+            <form action="">
+                <p>Дата Рождения</p>
+                <input class="right_form" type="text" placeholder="ФИО">
+            </form>
+
+
+            <form action="">
+                <p>Год начала обучение</p>
+                <input class="right_form" type="text" placeholder="ФИО">
+            </form>
+
+            <form action="">
+                <p>Направление</p>
+                <input class="right_form" type="text" placeholder="ФИО">
+            </form>
+
+
+            <div class="button_div">
+            <button>Добавить студента</button>
+            </div>
+        </div>
+    </div>
+    </main>
+</body>
+</html>
