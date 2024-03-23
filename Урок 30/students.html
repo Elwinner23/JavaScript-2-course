@@ -19,22 +19,25 @@
             <div class="filters">
                 <div class="filter">
                     <p class="title">ФИО</p>
-                    <input class="leftinput" type="text" placeholder="ФИО"/>
+                    <input class="leftinput" id="searchname" type="text" placeholder="ФИО"/>
                 </div>
                 <div class="filter">
                     <p class="title">Факультет</p>
-                    <input class="leftinput" type="text" placeholder="Факультет"/>
+                    <input class="leftinput" id="searchmajority" type="text" placeholder="Факультет"/>
                 </div>
                 <div class="filter">
                     <p class="title">Год начала обучения</p>
-                    <input class="leftinput" type="text" placeholder="Год начала обучения"/>
+                    <input class="leftinput" id="searchyear1" type="text" placeholder="Год начала обучения"/>
                 </div>
                 <div class="filter">
                     <p class="title">Год окончания обучения</p>
-                    <input class="leftinput" type="text" placeholder="Год окончания обучения"/>
+                    <input class="leftinput" id="searchyear2"type="text" placeholder="Год окончания обучения"/>
                 </div>
             </div>
-            <table>
+            <div class="filterbut">
+                <button id="filterbut">Фильтровать</button>
+            </div>
+            <table id="table">
                 <tr>
                     <th>ФИО</th>
                     <th>Направление</th>
@@ -68,19 +71,20 @@
         <div class="right">
             <h1>Добавить</h1>
             <p class="title">Фамилия</p>
-            <input class="rightinput" type="text" placeholder="Фамилия"/>
+            <input class="rightinput" id="surname" type="text" placeholder="Фамилия"/>
             <p class="title">Имя</p>
-            <input class="rightinput" type="text" placeholder="Имя"/>
+            <input class="rightinput" id="name" type="text" placeholder="Имя"/>
             <p class="title">Отчество</p>
-            <input class="rightinput" type="text" placeholder="Отчество"/>
+            <input class="rightinput" id="lastname" type="text" placeholder="Отчество"/>
             <p class="title">Дата Рождения</p>
-            <input class="rightinput" type="text" placeholder="Дата Рождения"/>
+            <input class="rightinput" id="birthday" type="text" placeholder="Дата Рождения"/>
             <p class="title">Год начала обучения</p>
-            <input class="rightinput" type="text" placeholder="Год начала обучения"/>
+            <input class="rightinput" id="year1" type="text" placeholder="Год начала обучения"/>
             <p class="title">Направние</p>
-            <input class="rightinput" type="text" placeholder="Направление"/>
-            <button class="dobavit">Добавить студента</button>
+            <input class="rightinput" id="majority" type="text" placeholder="Направление"/>
+            <button class="dobavit" id="dobavit">Добавить студента</button>
         </div>
     </div>
 </body>
+<script src="students.js"></script>
 </html>

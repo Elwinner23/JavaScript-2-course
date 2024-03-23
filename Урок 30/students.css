@@ -116,7 +116,7 @@ td {
     text-align: center;
 }
 
-.dobavit{
+.dobavit {
     margin-bottom: 10%;
     width: 70%;
     height: 6%;
@@ -128,4 +128,16 @@ td {
     font-weight: 400;
     font-style: normal;
     background-color: #A65200;
+}
+#filterbut {
+    margin-top: 5%;
+    margin-left: 7%;
+    width: 20%;
+    height: 6%;
+    border: none;
+    border-radius: 4px;
+    padding-left: 7px;
+    color: #ffffff;
+    background-color: #A65200;
+    cursor: pointer;
 }
