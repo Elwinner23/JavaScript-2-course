@@ -100,14 +100,15 @@ function filtration(data){
     
 
     const filteredStudents = data.filter(student => {
-        //const fullfullnameValue = student.name + ' ' + student.surname + ' ' + student.lastname;
-        //console.log(fullfullnameValue)
-        if (nameValue && student.majority.toLowerCase() !== facultyValue.toLowerCase()) {
+        const fullfullnameValue = student.surname + ' ' + student.name + ' ' + student.lastname;
+        console.log(fullfullnameValue)
+        console.log(nameValue)
+        if (nameValue && fullfullnameValue.toLowerCase() !== nameValue.toLowerCase()) {
             return false;
         }
-        //if (facultyValue && fullfullnameValue !== facultyValue.toLowerCase()) {
-        //    return false;
-        //}
+        if (facultyValue && student.majority.toLowerCase() !== facultyValue.toLowerCase()) {
+            return false;
+        }
         if (birthDateValue && student.birthday !== birthDateValue) {
             return false;
         }
