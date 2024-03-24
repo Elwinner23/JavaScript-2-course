@@ -7,7 +7,7 @@ async function postData(){
         lastname: middleNameInput.value,
         birthday: birthInput.value,
         studyStart: studyYearInput.value,
-        faculty: facultyInput.value,
+        majority: majorityInput.value,
       }),
       headers: {
         'Content-type': 'application/json',
@@ -33,34 +33,34 @@ async function filterData(){
     const response = await fetch('http://localhost:3000/api/students');
     const responseData = await response.json();
     
-    const fio = document.querySelector('#fio').value.toLowerCase();
-    const faculty = document.querySelector('#faculty').value.toLowerCase();
+    const fio = document.querySelector('#searchname').value.toLowerCase();
+    const majority = document.querySelector('#majority').value.toLowerCase();
     const birthday = document.querySelector('#birthday').value;
     const studyStart = document.querySelector('#studyStart').value;
 
-    let fio_filter; let faculty_filter; let birthday_filter; let studyStart_filter;
+    let fio_filter; let majority_filter; let birthday_filter; let studyStart_filter;
 
-    if (fio.replaceAll(' ', '') != '' || faculty.replaceAll(' ', '') != '' ||
+    if (fio.replaceAll(' ', '') != '' || majority.replaceAll(' ', '') != '' ||
      birthday.replaceAll(' ', '') != '' || studyStart.replaceAll(' ', '') != ''){
         if (fio != ''){
             fio_filter = responseData.filter(item => `${item.surname} ${item.name} ${item.lastname}`.toLowerCase() == fio.trim())
         }else{fio_filter = responseData};
-        if (faculty != ''){
-            faculty_filter = responseData.filter(item => item.faculty.toLowerCase() == faculty.trim())
-        }else{faculty_filter = responseData};
+        if (majority != ''){
+            majority_filter = responseData.filter(item => item.majority.toLowerCase() == majority.trim())
+        }else{majority_filter = responseData};
         if (birthday != ''){
             birthday_filter = responseData.filter(item => item.birthday == birthday.trim())
         }else{birthday_filter = responseData};
         if (studyStart != ''){
             studyStart_filter = responseData.filter(item => item.studyStart == studyStart.trim())
         }else{studyStart_filter = responseData};
-        display(getInt(fio_filter, faculty_filter, birthday_filter, studyStart_filter));
+        display(getInt(fio_filter, majority_filter, birthday_filter, studyStart_filter));
     }else{getData()};
     
     document.querySelector('#searchname').value = '';
     document.querySelector('#searchmajority').value = '';
-    document.querySelector('#searchyear1').value = '';
-    document.querySelector('searchyear2').value = '';
+    document.querySelector('#birthday').value = '';
+    document.querySelector('#studyStart').value = '';
 };
 
 function display(data){
@@ -72,7 +72,7 @@ function display(data){
         let recipient = document.createElement("tr");
         recipient.innerHTML = `
         <th>${element.surname} ${element.name} ${element.lastname}</th>
-        <td>${element.faculty}</td>
+        <td>${element.majority}</td>
         <td>${element.birthday}</td>
         <td>${element.studyStart}</td>
         <td onclick="deleteData(${element.id})">Х</td>`;
@@ -110,9 +110,9 @@ function inArray(arr, elem) {
 const surnameInput = document.querySelector('#surname');
 const nameInput = document.querySelector('#name');
 const middleNameInput = document.querySelector('#lastname');
-const birthInput = document.querySelector('#birthday');
+const birthInput = document.querySelector('#birthday2');
 const studyYearInput = document.querySelector('#year1');
-const facultyInput = document.querySelector('#majority');
+const majorityInput = document.querySelector('#majority2');
 const table = document.querySelector('#table');
 
 getData();
@@ -120,14 +120,14 @@ getData();
 document.querySelector('#dobavit').addEventListener('click', () => {
     if (surnameInput.value.replaceAll(' ', '') != '' && nameInput.value.replaceAll(' ', '') != '' && 
         middleNameInput.value.replaceAll(' ', '') != '' && birthInput.value.replaceAll(' ', '') != '' && 
-        studyYearInput.value.replaceAll(' ', '') != '' && facultyInput.value.replaceAll(' ', '') != ''){
+        studyYearInput.value.replaceAll(' ', '') != '' && majorityInput.value.replaceAll(' ', '') != ''){
             postData();
             surnameInput.value = '';
             nameInput.value = '';
             middleNameInput.value = '';
             birthInput.value = '';
             studyYearInput.value = '';
-            facultyInput.value = '';
+            majorityInput.value = '';
         }
 });
 
