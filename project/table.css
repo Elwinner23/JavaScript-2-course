@@ -118,12 +118,12 @@ tr:last-child{
     border-radius: 4px;
     padding-left: 7px;
     color: #ffffff;
-    background-color: #5E5BFF;
-    cursor: pointer;
+    background-color: #a09ff9;
 }
 
 .but{
-    margin-top: 5%;
+    margin-top: 3%;
+    margin-bottom: 1%;
     margin-left: 7%;
     width: 20%;
     height: 6%;
@@ -131,12 +131,20 @@ tr:last-child{
     border-radius: 4px;
     padding-left: 7px;
     color: #ffffff;
-    background-color: #5E5BFF;
-    cursor: pointer;
+    background-color: #a09ff9;
 }
 
 .deleteButton{
     background-color: #535252;
     border: none;
     cursor: pointer;
+}
+
+.cross{
+    cursor: pointer;
+    padding-left: 40px;
+}
+
+.cross:hover{
+    color: red;
 }
