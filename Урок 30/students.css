@@ -129,7 +129,7 @@ td {
     font-style: normal;
     background-color: #A65200;
 }
-#filterbut {
+.but {
     margin-top: 5%;
     margin-left: 7%;
     width: 20%;

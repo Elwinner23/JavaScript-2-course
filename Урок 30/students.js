@@ -1,5 +1,46 @@
+const surnameInput = document.getElementById('surname');
+const nameInput = document.getElementById('name');
+const middleNameInput = document.getElementById('lastname');
+const birthInput = document.getElementById('birthday2');
+const studyYearInput = document.getElementById('year');
+const faculty = document.getElementById('faculty');
+const table = document.getElementById('table');
+
+const full_name = document.getElementById('searchname');
+const faculty_search = document.getElementById('searchfaculty');
+const birthday = document.getElementById('birthday');
+const start = document.getElementById('StudyStart');
+
+const filterButton = document.getElementById('update');
+const addButton = document.getElementById('dobavit');
+
+async function getData(){
+    const response = await fetch('http://localhost:3000/api/students');
+    var responseData = await response.json();
+    data = responseData;
+    display(responseData);
+};
+
+function display(data){
+    table.innerHTML = '';
+    const thagolovok = document.createElement("tr");
+    thagolovok.innerHTML = `<tr><td>ФИО</td><td>Направление</td><td>Дата рождения</td><td>Годы обучения</td><td>Удалить</td></tr>`;
+    table.append(thagolovok);
+    data.forEach(element => {
+        let recipient = document.createElement("tr");
+        recipient.innerHTML = `
+        <td>${element.surname} ${element.name} ${element.lastname}</td>
+        <td>${element.faculty}</td>
+        <td>${element.birthday}</td>
+        <td>${element.studyStart}</td>
+        <td class="cross" onclick="deleteData(${element.id})">Х</td>`;
+    table.append(recipient);
+    });
+    sortTable(2)
+};
+
 async function postData(){
-    const response = await fetch('http://localhost:3000/api/students/', {
+    const response = await fetch('http://localhost:3000/api/students', {
         method: 'POST',
         body: JSON.stringify({
         name: nameInput.value,
@@ -7,19 +48,13 @@ async function postData(){
         lastname: middleNameInput.value,
         birthday: birthInput.value,
         studyStart: studyYearInput.value,
-        majority: majorityInput.value,
+        faculty: faculty.value,
       }),
       headers: {
         'Content-type': 'application/json',
       }
     });
     getData();
-};
-
-async function getData(){
-    const response = await fetch('http://localhost:3000/api/students');
-    const responseData = await response.json();
-    display(responseData);
 };
 
 async function deleteData(id){
@@ -29,108 +64,148 @@ async function deleteData(id){
     getData();
 };
 
-async function filterData(){
-    const response = await fetch('http://localhost:3000/api/students');
-    const responseData = await response.json();
+function filtration(data){
+    const nameValue = full_name.value.trim();
+    const facultyValue = faculty_search.value.trim();
+    const birthDateValue = birthday.value.trim();
+    const studyStartValue = start.value.trim();
     
-    const fio = document.querySelector('#searchname').value.toLowerCase();
-    const majority = document.querySelector('#majority').value.toLowerCase();
-    const birthday = document.querySelector('#birthday').value;
-    const studyStart = document.querySelector('#studyStart').value;
 
-    let fio_filter; let majority_filter; let birthday_filter; let studyStart_filter;
-
-    if (fio.replaceAll(' ', '') != '' || majority.replaceAll(' ', '') != '' ||
-     birthday.replaceAll(' ', '') != '' || studyStart.replaceAll(' ', '') != ''){
-        if (fio != ''){
-            fio_filter = responseData.filter(item => `${item.surname} ${item.name} ${item.lastname}`.toLowerCase() == fio.trim())
-        }else{fio_filter = responseData};
-        if (majority != ''){
-            majority_filter = responseData.filter(item => item.majority.toLowerCase() == majority.trim())
-        }else{majority_filter = responseData};
-        if (birthday != ''){
-            birthday_filter = responseData.filter(item => item.birthday == birthday.trim())
-        }else{birthday_filter = responseData};
-        if (studyStart != ''){
-            studyStart_filter = responseData.filter(item => item.studyStart == studyStart.trim())
-        }else{studyStart_filter = responseData};
-        display(getInt(fio_filter, majority_filter, birthday_filter, studyStart_filter));
-    }else{getData()};
-    
-    document.querySelector('#searchname').value = '';
-    document.querySelector('#searchmajority').value = '';
-    document.querySelector('#birthday').value = '';
-    document.querySelector('#studyStart').value = '';
-};
-
-function display(data){
-    table.innerHTML = '';
-    const thagolovok = document.createElement("tr");
-    thagolovok.innerHTML = `<tr><th>ФИО</th><td>Направление</td><td>Дата рождения</td><td>Годы обучения</td><td>Удалить</td></tr>`;
-    table.append(thagolovok);
-    data.forEach(element => {
-        let recipient = document.createElement("tr");
-        recipient.innerHTML = `
-        <th>${element.surname} ${element.name} ${element.lastname}</th>
-        <td>${element.majority}</td>
-        <td>${element.birthday}</td>
-        <td>${element.studyStart}</td>
-        <td onclick="deleteData(${element.id})">Х</td>`;
-    table.append(recipient);
-    });
-};
- 
-function getInt(...arrs) {
-	let result = [];
-	let arr0 = arrs.shift();
-	
-	for (let elem of arr0) {
-		if(inArrays(arrs, elem)) {
-			result.push(elem);
-		}
-	}
-	
-	return result;
+    if (nameValue.replaceAll(' ', '') != '' && facultyValue.replaceAll(' ', '') != '' && 
+    birthDateValue.replaceAll(' ', '') != '' && studyStartValue.replaceAll(' ', '') != ''){
+        var filteredStudents = data.filter(student => {
+            const fullfullnameValue = student.surname + ' ' + student.name + ' ' + student.lastname;
+            if (nameValue && fullfullnameValue.toLowerCase() !== nameValue.toLowerCase()) {
+                return false;
+            }
+            if (facultyValue && student.faculty.toLowerCase() !== facultyValue.toLowerCase()) {
+                return false;
+            }
+            if (birthDateValue && student.birthday !== birthDateValue) {
+                return false;
+            }
+            if (studyStartValue && student.studyStart !== studyStartValue) {
+                return false;
+            }
+            return true;
+        });
+    }
+    display(filteredStudents);
+    clean(full_name, faculty_search, birthday, start, start, start)
 }
 
-function inArrays(arrs, elem) {
-	for (let arr of arrs) {
-		if (!inArray(arr, elem)) {
-			return false;
-		}
-	}
-	
-	return true;
+function clean(a, b, c, d, e, f){
+    a.value = '';
+    b.value ='';
+    c.value = '';
+    d.value = '';
+    e.value = '';
+    f.value = '';
 }
 
-function inArray(arr, elem) {
-	return arr.find(e => e === elem);
+function sortTable(columnIndex) {
+    var table, rows, switching, i, x, y, shouldSwitch;
+    table = document.getElementById("table");
+    switching = true;
+  
+    while (switching) {
+      switching = false;
+      rows = table.getElementsByTagName("tr");
+  
+      for (i = 1; i < (rows.length - 1); i++) {
+        shouldSwitch = false;
+        x = rows[i].getElementsByTagName("td")[columnIndex];
+        y = rows[i + 1].getElementsByTagName("td")[columnIndex];
+  
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+  
+      if (shouldSwitch) {
+        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        switching = true;
+      }
+    }
+  }
+
+function check(a){
+    if (a.value == ''){
+        a.style.border = "1px solid red";
+    }
 }
 
-const surnameInput = document.querySelector('#surname');
-const nameInput = document.querySelector('#name');
-const middleNameInput = document.querySelector('#lastname');
-const birthInput = document.querySelector('#birthday2');
-const studyYearInput = document.querySelector('#year1');
-const majorityInput = document.querySelector('#majority2');
-const table = document.querySelector('#table');
+function checking(a, b, c, d, e, f){
+    check(a);
+    check(b);
+    check(c);
+    check(d);
+    check(e);
+    check(f);
+}
+
+function proverka(a, b, c, d, e, f, but){
+    if (a.value.replaceAll(' ', '') != '' && b.value.replaceAll(' ', '') != '' && 
+        c.value.replaceAll(' ', '') != '' && d.value.replaceAll(' ', '') != '' && 
+        e.value.replaceAll(' ', '') != '' && f.value.replaceAll(' ', '') != ''){
+            but.style.backgroundColor = '#A65200';
+            but.style.cursor = 'pointer';
+        }
+}
+
+surnameInput.addEventListener('focusout', () => {
+        proverka(surnameInput, nameInput, middleNameInput, birthInput, studyYearInput, faculty, addButton)
+});
+nameInput.addEventListener('focusout', () => {
+    proverka(surnameInput, nameInput, middleNameInput, birthInput, studyYearInput, faculty, addButton)
+});
+middleNameInput.addEventListener('focusout', () => {
+    proverka(surnameInput, nameInput, middleNameInput, birthInput, studyYearInput, faculty, addButton)
+});
+birthInput.addEventListener('focusout', () => {
+    proverka(surnameInput, nameInput, middleNameInput, birthInput, studyYearInput, faculty, addButton)
+});
+studyYearInput.addEventListener('focusout', () => {
+    proverka(surnameInput, nameInput, middleNameInput, birthInput, studyYearInput, faculty, addButton)
+});
+faculty.addEventListener('focusout', () => {
+    proverka(surnameInput, nameInput, middleNameInput, birthInput, studyYearInput, faculty, addButton)
+})
+
+full_name.addEventListener('focusout', () => {
+    proverka(full_name, faculty_search, birthday, start, start, start, filterButton)
+});
+faculty_search.addEventListener('focusout', () => {
+    proverka(full_name, faculty_search, birthday, start, start, start, filterButton)
+});
+birthday.addEventListener('focusout', () => {
+    proverka(full_name, faculty_search, birthday, start, start, start, filterButton)
+});
+start.addEventListener('focusout', () => {
+    proverka(full_name, faculty_search, birthday, start, start, start, filterButton)
+})
+
 
 getData();
 
-document.querySelector('#dobavit').addEventListener('click', () => {
+addButton.addEventListener('mouseenter', () => {
+    checking(surnameInput, nameInput, middleNameInput, birthInput, studyYearInput, faculty)
+});
+
+filterButton.addEventListener('mouseenter', () => {
+    checking(full_name, faculty_search, birthday, start, start, start)
+});
+
+addButton.addEventListener('click', () => {
     if (surnameInput.value.replaceAll(' ', '') != '' && nameInput.value.replaceAll(' ', '') != '' && 
         middleNameInput.value.replaceAll(' ', '') != '' && birthInput.value.replaceAll(' ', '') != '' && 
-        studyYearInput.value.replaceAll(' ', '') != '' && majorityInput.value.replaceAll(' ', '') != ''){
+        studyYearInput.value.replaceAll(' ', '') != '' && faculty.value.replaceAll(' ', '') != ''){
             postData();
-            surnameInput.value = '';
-            nameInput.value = '';
-            middleNameInput.value = '';
-            birthInput.value = '';
-            studyYearInput.value = '';
-            majorityInput.value = '';
+            clean(surnameInput, nameInput, middleNameInput, birthInput, studyYearInput, faculty)
         }
 });
 
-document.querySelector('#filterbut').addEventListener('click', () => {
-    filterData();
+filterButton.addEventListener('click', () => {
+    filtration(data)
 });

@@ -23,7 +23,7 @@
                 </div>
                 <div class="filter">
                     <p class="title">Факультет</p>
-                    <input class="leftinput" id="searchmajority" type="text" placeholder="Факультет"/>
+                    <input class="leftinput" id="searchfaculty" type="text" placeholder="Факультет"/>
                 </div>
                 <div class="filter">
                     <p class="title">Дата рождения</p>
@@ -34,9 +34,7 @@
                     <input class="leftinput" id="StudyStart" type="text" placeholder="Год начала обучения"/>
                 </div>
             </div>
-            <div class="filterbut">
-                <button id="filterbut">Фильтровать</button>
-            </div>
+            <button class="but" id ="update">Найти</button>
             <table id="table">
                 <tr>
                     <th>ФИО</th>
@@ -44,27 +42,6 @@
                     <th>Дата рождения</th>
                     <th>Годы обучения</th>
                     <th>Удалить</th>
-                </tr>
-                <tr>
-                    <td>Иванов И.И.</td>
-                    <td>Frontend</td>
-                    <td>12.12.2007</td>
-                    <td>2023-2027 (1 курс)</td>
-                    <td class="last">&#215;</td>
-                </tr>
-                <tr>
-                    <td>Петров П.П.</td>
-                    <td>Backend</td>
-                    <td>31.08.2005</td>
-                    <td>2022-2026 (2 курс)</td>
-                    <td class="last">&#215;</td>
-                </tr>
-                <tr>
-                    <td>Смирнов С.С.</td>
-                    <td>Frontend</td>
-                    <td>11.03.2002</td>
-                    <td>2020-2024 (закончил)</td>
-                    <td class="last">&#215;</td>
                 </tr>
             </table>
         </div>
@@ -79,9 +56,9 @@
             <p class="title">Дата Рождения</p>
             <input class="rightinput" id="birthday2" type="text" placeholder="Дата Рождения"/>
             <p class="title">Год начала обучения</p>
-            <input class="rightinput" id="year1" type="text" placeholder="Год начала обучения"/>
+            <input class="rightinput" id="year" type="text" placeholder="Год начала обучения"/>
             <p class="title">Направние</p>
-            <input class="rightinput" id="majority2" type="text" placeholder="Направление"/>
+            <input class="rightinput" id="faculty" type="text" placeholder="Направление"/>
             <button class="dobavit" id="dobavit">Добавить студента</button>
         </div>
     </div>
